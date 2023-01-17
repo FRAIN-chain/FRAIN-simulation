@@ -29,9 +29,10 @@ def argparser():
                         help='Average # of Transaction per block')
     parser.add_argument('--freq', metavar='F', type=float, default=0.1,
                         help='Inference Request / Normal Tx')
-    # # (NDSS 19) Sereum - Protecting Existing Smart Contracts Against Re-Entrancy Attacks
-    # parser.add_argument('--latency', metavar='L', type=float, default=0.05,
-    #                     help='Latency of normal EVM execution')
+    # (0.05 / 155) : Sereum - Protecting Existing Smart Contracts Against Re-Entrancy Attacks
+    # (0.001) : Ethanos - efficient bootstrapping for full nodes on account-based blockchain
+    parser.add_argument('--latency', metavar='L', type=float, default=0.001,
+                        help='Latency of normal EVM execution (s)')
 
     """BRAIN Hyperparams"""
 
@@ -60,7 +61,7 @@ if __name__ == "__main__":
 
     args = argparser()
     print(args)
-    print("=" * 77)
+    print("=" * 85)
     print()
 
     filepath = PATH + '/' + 'med_times.csv'
@@ -79,8 +80,10 @@ if __name__ == "__main__":
     print(f"Average # TX per block: {args.size}")
     # print(f"Normal TX latency: {args.latency:8.4f}, Avg Inference latency: {np.average(times[np.nonzero(times)]):8.4f}, (SD: {times.std():8.4f})")
     print(f"Avg Inference latency: {np.average(times[np.nonzero(times)]):8.4f}, (SD: {times.std():8.4f})")
-    print("=" * 77)
+    print("=" * 85)
     print()
+
+    """Simulator"""
 
     from queue import PriorityQueue  # (priority, (block_height_when_req, time, qtxid))
     # top() -> qs.queue[0]
@@ -94,21 +97,20 @@ if __name__ == "__main__":
         s += lower
         return s.clip(lower, upper)
 
-    """Simulator"""
-
     repeat = args.repeat
     nodes = args.nodes
 
     # Evaluation data above all rounds
-    latencies = np.array([], dtype=int)
+    latencies_block = np.array([], dtype=int)
     blocks = list()
+    ntxs = list()
 
     for r in range(repeat):  # in this repeat,
         random.seed(args.seed + r)  # fix seed for each round
 
+        # BRAIN
         qs = PriorityQueue()  # lower is first. (because of pareto dist.)
         ps = pareto(qtxn, lower=2, upper=1000)  # 0 for highest priority, 1 for secondary
-
         commitments = np.array([0 for _ in range(qtxn)])
         # revelations = np.array([0 for _ in range(qtxn)])  # assumption: all nodes reveal commitment in an one block.
 
@@ -123,9 +125,10 @@ if __name__ == "__main__":
             txs += [-1 for _ in range(args.stop - len(txs))]  # for late submissions
 
         # for VRF
-        current_block = 0
         seed = args.seed + r
 
+        # data
+        current_block = 0
         timeout_count = 0
         inference_count = 0
 
@@ -133,7 +136,7 @@ if __name__ == "__main__":
             if txid % args.size == 0:
                 current_block += 1
 
-            print(f"Round {r:4d}, Block {current_block:4d}, Count {inference_count+timeout_count:4d}), txid {txid:6d} / {len(txs):6d}, tx {'normal' if tx == -1 else 'inferq'} {tx:4d}", end='\r')
+            print(f"Round {r:4d}, Block {current_block:4d}, Count {inference_count+timeout_count:4d}, txid {txid:6d} / {len(txs):6d}, tx {'normal' if tx == -1 else 'inferq'} {tx:4d}", end='\r')
 
             # Tx
             if tx == -1:  # normal tx
@@ -194,26 +197,43 @@ if __name__ == "__main__":
 
         """End of Round"""
 
-        # print("=" * 77)
+        # print("=" * 85)
         for i, inference in enumerate(inferences):
             if inference['end'] == -1:
                 # TODO: fallbacks (for not ended qtxs)
                 print(f"Fallbacks @ {r:4d}, {i:4d}, {inference}")
             else:
-                latencies = np.append(latencies, [inference['end'] - inference['start']])  # latencies
+                latencies_block = np.append(latencies_block, [inference['end'] - inference['start']])  # latencies_block
 
         print(f"Round {r:4d}, Block {current_block:4d}, Inference: # {inference_count:4d}, Timeout: # {timeout_count:4d}" + " " * 19)
         # print("Queue", qs.queue)
         # Per round operations
         blocks.append(current_block)
+        ntxs.append(txid)
 
     # All round operations
-    print("=" * 77)
-    print("Blocks per round:", blocks)
-    print(f"Round  All: Latency Min {min(latencies):4d}, Max {max(latencies):4d}, Avg {(np.average(latencies)):8.4f} (SD: {latencies.std():8.4f}), MED {int(np.median(latencies)):4d}")
+    # print("=" * 85)
+    # print("Blocks per round:", blocks)
+    # print("TXs per round     :", ntxs)
+
+    def evaluate(A):
+        return f"Min {min(A):10.4f}, Max {max(A):10.4f}, Avg {(np.average(A)):10.4f} (SD: {A.std():10.4f}), MED {(np.median(A)):10.4f}"
+
+    print("=" * 85)
     print()
 
-    latencies = latencies.reshape((args.repeat, qtxn))
-    for r, ls in enumerate(latencies):
-        print(f"Round {r:4d}: Latency Min {min(ls):4d}, Max {max(ls):4d}, Avg {(np.average(ls)):8.4f} (SD: {ls.std():8.4f}), MED {int(np.median(ls)):4d}")
-        
+    ntxs = np.array(ntxs)
+    elapsed_times = (ntxs - qtxn) * args.latency + sum(times)
+
+    print(f"Execution Time (s)     : {sum(times):10.4f}")
+    print(f"TPS (tx/s) No Inference: {(1 / args.latency):10.4f}")
+    print(f"TPS (tx/s) Other       :", evaluate(819. / elapsed_times))
+    print(f"TPS (tx/s) BRAIN       :", evaluate(ntxs / elapsed_times))
+    print("=" * 85)
+    print()
+
+    print(f"Round  All: Latency[Blocks] Min {min(latencies_block):4d}, Max {max(latencies_block):4d}, Avg {(np.average(latencies_block)):8.4f} (SD: {latencies_block.std():8.4f}), MED {int(np.median(latencies_block)):4d}")
+    latencies_block = latencies_block.reshape((args.repeat, qtxn))
+    for r, ls in enumerate(latencies_block):
+        print(f"Round {r:4d}: Latency[Blocks] Min {min(ls):4d}, Max {max(ls):4d}, Avg {(np.average(ls)):8.4f} (SD: {ls.std():8.4f}), MED {int(np.median(ls)):4d}")
+    print()
