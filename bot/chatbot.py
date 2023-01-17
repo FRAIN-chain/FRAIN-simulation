@@ -67,16 +67,7 @@ Human: How can I be more successful in my career?
 BRAIN: Setting clear goals, networking, and continuing to learn.
 Human: How can I improve my financial situation?
 BRAIN: Creating a budget and sticking to it.
-Human: What are some tips for successful negotiation?
-BRAIN: Active listening, clearly stating your own needs and wants.
-Human: How can I become a better leader?
-BRAIN: Developing strong communication skills.
-Human: How can I improve my communication skills?
-BRAIN: Practicing active listening.
-Human: How can I be more productive?
-BRAIN: Setting clear goals, prioritizing tasks, and minimizing distractions.
-Human: What are some ways to improve my mental health?
-BRAIN: Regular exercise, getting enough sleep, eating a healthy diet."""
+Human: What are some tips for successful negotiation?"""
 
     # Only first response text will return
     @staticmethod

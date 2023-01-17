@@ -69,15 +69,63 @@ Version:
 
 ---
 
+# Simulation
+
+Get Inference Time Table:
+
+```bash
+$ python simulate/refine.py
+```
+
+Run BRAIN Simulation:
+
+```bash
+$ python simulate/nodes.py
+```
+
+## How to Use
+
+```bash
+$ python simulate/nodes.py --help
+```
+
+```
+usage: nodes.py [-h] [--seed S] [--repeat R] [--stop P]
+                [--interval I] [--size S] [--freq F] [--nodes N]
+                [--epoch E] [--d D] [--qc QC] [--tc TC]
+
+Hyperparameters
+
+optional arguments:
+  -h, --help    show this help message and exit
+  --seed S      Seed for simulation
+  --repeat R    # simulation
+  --stop P      Stop this round when for loop reaching P
+  --interval I  Average Block Time
+  --size S      Average # of Transaction per block
+  --freq F      Inference Request / Normal Tx
+  --nodes N     Number of nodes
+  --epoch E     Epoch [blocks]
+  --d D         difficulty (0, 2^256-1], but scaling into (0, 256]
+  --qc QC       Quorum of Commitments
+  --tc TC       Period of the Commit Phase [blocks]
+```
+
+---
+
 # Test
 
 ## Inference
 
 ```bash
-$ sh test.sh
+$ sh test_0.sh
 ```
 
-(time, input tokens, output tokens, response) test results are saved in `results`.
+```bash
+$ sh test_1.sh
+```
+
+(round, time, input tokens, output tokens, response) test results are saved in `results`.
 
 ## `curl`
 

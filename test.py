@@ -65,14 +65,18 @@ if __name__ == "__main__":
         rounds = len(test_dataset)
 
     # time, input tokens, output tokens, response
-    print("time\tinputs\toutputs\tresponse")
+    print("round\ttime\tinputs\toutputs\tresponse")
 
     for r in range(rounds):
         input = test_dataset[r]['dialogue'].split(": ", 1)[1].split("\n")[0]
         # print(r, test_dataset[r]['dialogue'].split(": ", 1)[1].split("\n")[0])
+        print(r, end="\t")
 
-        chat(
-            prompt=input,
-            max_length=128,
-            seed=r + 42
-        )
+        try:
+            chat(
+                prompt=input,
+                max_length=128,
+                seed=r + 42
+            )
+        except Exception as E:
+            print(f"{r}\t{0}\t{''}\t{''}\t{E}")
