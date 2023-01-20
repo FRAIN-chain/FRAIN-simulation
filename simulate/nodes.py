@@ -16,7 +16,7 @@ def argparser():
                         help='Seed for simulation')
     parser.add_argument('--repeat', metavar='R', type=int, default=100,
                         help='# simulation')
-    parser.add_argument('--stop', metavar='P', type=int, default=1000000,
+    parser.add_argument('--stop', metavar='P', type=int, default=2000000,
                         help='Stop this round when for loop reaching P')
     parser.add_argument('--verbose', metavar='V', type=int, default=1,
                         help='0: silent, 1: speak, 2: speak all')
@@ -34,7 +34,7 @@ def argparser():
     # 5752729 / 99638953 = 0.05773574317 -> 0.0577
     parser.add_argument('--freq', metavar='F', type=float, default=0.0577,
                         help='Inference Request / Normal Tx')
-    # (0.05 / 155) : Sereum - Protecting Existing Smart Contracts Against Re-Entrancy Attacks
+    # (0.05 / 155) = 0.0003225806452 : Sereum - Protecting Existing Smart Contracts Against Re-Entrancy Attacks
     # (0.001) : Ethanos - efficient bootstrapping for full nodes on account-based blockchain
     parser.add_argument('--latency', metavar='L', type=float, default=0.001,
                         help='Latency of normal EVM execution (s)')
@@ -43,7 +43,7 @@ def argparser():
 
     parser.add_argument('--nodes', metavar='N', type=int, default=21,
                         help='Number of nodes')  # Also, Block Producer (BP)
-    parser.add_argument('--epoch', metavar='E', type=int, default=4,
+    parser.add_argument('--epoch', metavar='E', type=int, default=8,
                         help='Epoch [blocks]')
     parser.add_argument('--d', metavar='D', type=int, default=128,
                         help='difficulty (0, 2^256-1], but scaling into (0, 256]')
@@ -51,8 +51,8 @@ def argparser():
                         help='Quorum of Commitments')
     # parser.add_argument('--qr', metavar='QR', type=int, default=11,
     # help='Quorum of Revelations')
-    parser.add_argument('--tc', metavar='TC', type=int, default=5,
-                        help='Period of the Commit Phase (Timeout) [blocks]')
+    parser.add_argument('--qto', metavar='O', type=int, default=20,
+                        help='Inference Request\'s Timeout [blocks]')
     # parser.add_argument('--tr', metavar='TR', type=int, default=30,
     # help='Period of the Reveal Phase [blocks]')
     # parser.add_argument('--te', metavar='TE', type=int, default=1000,
@@ -120,8 +120,9 @@ if __name__ == "__main__":
         # BRAIN
         qs = PriorityQueue()  # lower is first. (because of pareto dist.)
         ps = pareto(n_qtx, lower=2, upper=1000)  # 0 for highest priority, 1 for secondary
-        commitments = np.array([0 for _ in range(n_qtx)])
+        commitments = np.zeros(n_qtx)
         # revelations = np.array([0 for _ in range(n_qtx)])  # assumption: all nodes reveal commitment in an one block.
+        committee = np.zeros((n_qtx, args.nodes))
 
         # Metrics
         inferences = [dict({'start': -1, 'end': -1}) for _ in range(n_qtx)]  # latency = inferences[id][end] - inferences[id][start] in [Block]  # for evaluation
@@ -133,7 +134,7 @@ if __name__ == "__main__":
         txs += [-1 for _ in range(args.stop - len(txs))]
 
         # for VRF
-        seed = args.seed + r
+        # seed = args.seed + r
 
         # data
         current_block = 0
@@ -174,7 +175,7 @@ if __name__ == "__main__":
                 # Actions: not empty, highest priority.
                 if (not qs.empty()) and (qs.queue[0][0] == 0):
                     # Timeout
-                    if current_block - qs.queue[0][1][0] >= args.tc:
+                    if current_block - qs.queue[0][1][0] >= args.qto:
                         qs.get()
                         timeout_count += 1
                         # break
@@ -184,30 +185,28 @@ if __name__ == "__main__":
                         q = qs.queue[0][1]
 
                         # vrf
-                        vrf_seed = int(f"{q[2]}{seed}{int(current_block / args.epoch)}{n}")
-                        random.seed(vrf_seed)
-                        if random.randint(0, 256) < args.d:  # join committee
+                        # vrf_seed = int(f"{q[2]}{seed}{int(current_block / args.epoch)}{n}")
+                        # random.seed(vrf_seed)
+                        y = random.randint(0, 256)
+                        if (y < args.d) and (committee[q[2]][n] == 0):  # join committee
                             # inference
                             # print(f"- node {n} do inference")
 
                             # commit
                             commitments[q[2]] += 1
                             additional_tx += 2  # commit and reveal
+                            committee[q[2]][n] = 1
 
                             if commitments[q[2]] >= args.qc:
                                 # seed update
-                                random.seed(seed)
-                                seed = random.randint(0, 256)  # 0~256
+                                # random.seed(seed)
+                                # seed = random.randint(0, 256)  # 0~256
 
                                 # pop
                                 qs.get()
+                                inferences[q[2]]['end'] = current_block + int(times[q[2]] / args.interval) + 1  # for inference time
                                 inference_count += 1
-                                # break
-
-            # commit->reveal->execute
-            for id in np.where(commitments >= args.qc)[0]:  # Actually, ==
-                if inferences[id]['end'] == -1:
-                    inferences[id]['end'] = current_block + int(times[id] / args.interval) + 1  # for inference time
+                                current_block += 1
 
             if (inference_count + timeout_count) == n_qtx:
                 break
@@ -231,7 +230,7 @@ if __name__ == "__main__":
             print()
         # print("Queue", qs.queue)
         # Per round operations
-        blocks.append(current_block + 1)
+        blocks.append(current_block + 1)  # +1
         n_txs.append(math.ceil(txid / args.size) * args.size)
         timeouts.append(timeout_count)
         max_queue_lens.append(max_queue_len)
@@ -247,6 +246,7 @@ if __name__ == "__main__":
             return "Empty"
         return f"Min {min(A):10.4f}, Max {max(A):10.4f}, Avg {(np.average(A)):10.4f} (SD: {A.std():10.4f}), MED {(np.median(A)):10.4f}"
 
+    blocks = np.array(blocks)
     n_txs = np.array(n_txs)  # number of tasks
     timeouts = np.array(timeouts)  # failed inference tasks
     max_queue_lens = np.array(max_queue_lens)
