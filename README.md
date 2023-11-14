@@ -161,6 +161,12 @@ optional arguments:
   --tc TC       Period of the Commit Phase [blocks]
 ```
 
+or
+
+```bash
+$ sh simul.sh
+```
+
 ---
 
 # Contracts

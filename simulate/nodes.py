@@ -10,6 +10,7 @@ PATH = "./results"
 
 
 def argparser():
+    """ Parse command line arguments for the simulation. """
     parser = argparse.ArgumentParser(description='Hyperparameters')
 
     parser.add_argument('--seed', metavar='S', type=int, default=42,
@@ -43,6 +44,8 @@ def argparser():
 
     parser.add_argument('--nodes', metavar='N', type=int, default=21,
                         help='Number of nodes')  # Also, Block Producer (BP)
+    parser.add_argument('--byz', metavar='B', type=int, default=0,
+                        help='The number of Byzantine nodes')
     parser.add_argument('--epoch', metavar='E', type=int, default=8,
                         help='Epoch [blocks]')
     parser.add_argument('--d', metavar='D', type=int, default=128,
@@ -154,6 +157,12 @@ if __name__ == "__main__":
             if tx == -1:  # normal tx
                 pass
             else:  # inference request tx
+
+                # Fail case
+                if (args.nodes - args.byz) < args.qc:
+                    timeout_count += 1
+                    continue
+
                 qs.put((ps[tx], (current_block, times[tx], tx)))  # inference request, push()
                 inferences[tx]['start'] = current_block
                 # counting on tx - no additional tx
@@ -188,7 +197,10 @@ if __name__ == "__main__":
                         # vrf_seed = int(f"{q[2]}{seed}{int(current_block / args.epoch)}{n}")
                         # random.seed(vrf_seed)
                         y = random.randint(0, 256)
-                        if (y < args.d) and (committee[q[2]][n] == 0):  # join committee
+                        # byzantine
+                        # probabilistic approach
+                        bp = random.randint(0, args.nodes)
+                        if (bp >= args.byz) and (y < args.d) and (committee[q[2]][n] == 0):  # join committee
                             # inference
                             # print(f"- node {n} do inference")
 
@@ -207,6 +219,9 @@ if __name__ == "__main__":
                                 inferences[q[2]]['end'] = current_block + int(times[q[2]] / args.interval) + 1  # for inference time
                                 inference_count += 1
                                 current_block += 1
+
+                        elif (bp < args.byz) and (n == args.nodes - 1):  # byzantine case
+                            current_block += 1
 
             if (inference_count + timeout_count) == n_qtx:
                 break
