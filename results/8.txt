@@ -1,0 +1,820 @@
+round	time	inputs	outputs	response
+0	40.54308105	295	10	Keep the conversation simple and focus on the topic.
+1	2.91804147	291	9	A great way to make life more enjoyable.
+2	0.55919623	296	11	Giving each other room and respecting each other's opinions.
+3	3.69854999	298	19	When you find yourself having to negotiate with others, consider how you would like to be treated.
+4	7.43811774	293	12	You can see all of our locations by visiting our website.
+5	12.50957799	299	6	I am in the brain.
+6	10.65466213	296	11	Amazon, Zazzle, Gilt, or eBay
+7	0.88891435	300	6	Stealing time to sleep.
+8	1.53191161	312	8	Make an offer; bargain or accept.
+9	14.27489257	290	7	How did you like the lecture?
+10	3.16287208	293	13	Planning and setting up a party the day before or after.
+11	2.08336329	293	17	You received a reward for your good behaviour. You may choose to keep the reward.
+12	0.95012522	296	14	Improvise, be flexible, and engage in more challenging assignments.
+13	25.00080538	294	22	If you’re going by car, you’ll arrive at your meeting room 15 minutes prior.
+14	42.62559295	299	9	What are the benefits of netflix family?
+15	0.46160388	299	8	Be clear on what you really want.
+16	38.95742607	296	39	Get an excellent poker face, have a good relationship with a trusted confidant, and develop a relationship with the other party. Then be professional, be polite, and always stick to your guns.
+17	16.78949046	307	10	Look at other options that may be less stressful.
+18	10.48356986	294	9	I'm doing some work on my laptop.
+19	4.25616527	299	11	Sorry, I don't understand what you're asking.
+20	5.38220692	295	8	I just sent you a friend request.
+21	43.62140036	296	7	Just read through the material thoroughly.
+22	12.17758346	293	11	You know him. You think he's an idiot.
+23	11.10127544	297	9	Think, be clear, and stay calm.
+24	9.99534535	300	10	We sure hope they get the job, right?
+25	2.06353283	296	8	Are you sure you want the first?
+26	17.80121088	292	7	Be honest with yourself and others.
+27	6.98168683	302	15	Not exactly sure what happened, but probably something to do with budget cuts.
+28	41.59283400	291	9	I'm in Washington, D.C.
+29	4.07210302	297	10	I have an idea that'll cheer u up!
+30	0.81209183	298	17	Talk to your family about your financial problems, and figure out ways to solve them.
+31	47.33783603	336	6	lily-oh-nine
+32	0.61698055	291	12	Get to know a few of your partner's friends first.
+33	40.48698092	295	25	Tell your spouse or partner what you need and expect. Do it in a way that doesn't set you up for failure.
+34	43.57635641	302	6	I don't have it.
+35	10.73947954	302	11	Ask him what he would like and act on it.
+36	9.97458720	292	25	Check out our game if you want to give it a try. DA is a great way to make friends and have fun!
+37	0.56218910	296	11	We're wired to be attracted to the wrong people.
+38	41.90653062	292	13	You can become more persuasive by understanding the other person's perspective.
+39	4.38781238	303	14	The key to negotiation is to be honest and clear from the start.
+40	34.33261395	298	11	Let your landlord know you are ready to pay rent.
+41	9.83468652	296	8	The following two options are both available:
+42	10.47384453	327	45	Your trip is great and the connection is still working. The problem is the lack of bandwidth. We are doing fine here though and enjoying our holiday. Everything at home is good and our family is looking forward to seeing you.
+43	40.16446590	295	7	I don't think I do.
+44	41.51611233	303	6	Listen more than you speak.
+45	3.50590730	299	17	You may not remember this, but you took my notebook home last time you visited.
+46	1.69229722	294	3	A lot.
+47	15.98991323	292	5	Nike, because...
+48	43.16338563	295	17	If you can't find what you are looking for, come to me and ask.
+49	0.60295224	300	11	Don't go to bed too late or too early.
+50	0.43773961	298	7	Keep your head in the game.
+51	41.50376654	297	12	I don't like to gossip about others' personal lives.
+52	39.84649754	294	22	Keep a record of what has been discussed, and be prepared to walk out if an agreement is not reached.
+53	39.21224380	288	9	how r u? can i help u?
+54	9.78280449	291	8	Yes, I'm doing just fine.
+55	40.87796140	290	5	We should be friends.
+56	42.20242596	293	14	Pink roses, yellow roses, and red roses are the most popular.
+57	41.55765891	300	6	Thank you for your business.
+58	0.69205689	299	11	Make a guest list, plan, and be prepared.
+59	1.64658642	291	4	New York City.
+60	38.80950928	292	9	Making clear requests and sticking to your guns.
+61	3.22553539	292	24	A thorough analysis of the situation, taking into account the other party’s needs and desires, will be critical.
+62	41.42879939	292	8	How can I approach a new customer?
+63	18.19261885	296	4	Have a backup.
+64	44.83023381	307	30	I am very enthusiastic about the concept of Food Evening. I would love to involve more people and develop plans for them. Do you have any suggestions?
+65	41.81200838	290	12	Just got back in, and I'm feeling tired already.
+66	13.60529852	291	16	Don't get stuck in the past, keep the channel open for new opportunities.
+67	1.15090013	301	8	Negotiate in a friendly manner.
+68	42.38182878	297	9	I’m good thanks, yourself?
+69	3.57600069	292	18	Being prepared, understanding the other person's interests, building and maintaining relationships, and listening.
+70	1.47229838	303	34	Negotiation can only happen with good listening skills; if you have a good idea, it's always a good thing - even if you don't agree on every point.
+71	1.37768817	296	8	How can I stop procrastinating?
+72	43.23095846	303	15	How can I take time to relax and be a well-rounded person?
+73	14.30667567	300	14	What? I just asked if you're going out after work tonight.
+74	43.20927191	303	11	Kids means more responsibility, time, and maintenance costs.
+75	39.06887603	295	10	Be optimistic, be careful, and be prepared.
+76	5.01046014	306	15	Be prepared and be well-prepared when meeting a potential business partner.
+77	40.74730062	298	6	Ask for what you want.
+78	40.23430514	291	9	How would you like your brain to be?
+79	42.89906645	297	8	How can I deal with stressful situations?
+80	0.50209522	294	9	Don't be afraid to take a chance.
+81	3.08391047	288	10	How can I meet lots of cool new people?
+82	1.78206348	295	10	The Brain is the size of the tip of your
+83	9.71749854	292	7	We are not interested in humans.
+84	0.46349740	297	6	A book on time management.
+85	39.81618118	294	19	Consider the features you need for your device, such as size, connectivity, and battery life.
+86	40.53478622	297	10	Plan ahead and be open to the many possibilities.
+87	20.70876741	292	4	I am working.
+88	43.72120214	308	17	Make sure you have all the facts and figures on your side before entering a negotiation.
+89	40.88570666	300	5	I'll be there.
+90	16.10299182	296	17	Ask for what you're looking for, and make sure to have a backup plan.
+91	15.78687716	292	11	Well...It's cold, and I'm hungry.
+92	38.66179085	296	15	I'm fine. Is there anything else you'd like to talk about?
+93	1.39286613	298	17	No, I am not in Asda. I sell software services to other businesses.
+94	40.32236576	299	12	Have the right tools, prepare, negotiate, and listen.
+95	0.54872894	301	8	Pick a day and see it through.
+96	11.25651479	293	29	I know you have a job to do, so I won’t hold it against you if you can’t answer my question.
+97	40.51389885	296	9	Never... well, except the old ways.
+98	40.38583326	297	18	Negotiation is a part of every day life, and requires patience and a positive attitude.
+99	24.50594902	295	13	What was it exactly? I will need time to process this.
+100	40.91511989	301	10	It's not possible to skype with you.
+101	41.24161863	291	7	Taking a business approach to negotiation.
+102	40.91480184	299	5	3:30AM.
+103	40.10781240	295	8	I did. I saw a mouse.
+104	39.29866076	287	8	A strong sense of self-awareness.
+105	0.73478031	301	14	You're going to be spending a lot of time with your family.
+106	1.23645234	290	12	Ask for exactly what you need in the most polite manner.
+107	39.89537764	291	15	I'm working, but I'd like you to relax with a friend.
+108	41.50002241	292	15	[  No, I don't know anything about going swimming, I'll
+109	0.73503590	302	14	No way. You're the one who voted for this fucking guy.
+110	9.05105233	297	5	You're so high.
+111	19.97626305	296	12	School counselors are responsible for the safety of the whole school.
+112	3.52472019	290	29	You should be nice, friendly, and open to all sorts of different viewpoints. To get the most out of this, be a good listener.
+113	40.74163771	297	8	A cake, card, and present.
+114	8.64458442	294	3	i'm bored
+115	9.90653801	294	18	Cleaning the house is something that should be done, regardless of how busy one is.
+116	43.84282422	305	5	I'm up for it
+117	40.92723393	292	11	Being honest, being prepared, and showing good manners.
+118	0.91153455	296	20	I don't want to be rude. I know that all of you live in the same neighborhood.
+119	22.45146251	294	11	I am Sandra Donovan from BRAIN-Tec.
+120	10.71957946	299	3	Can't go
+121	10.62382865	298	27	That's very kind. This is Dr. Brain. I'm your host, and I'm here to give you a little help.
+122	21.83135533	295	23	I'm really sorry to hear that, but I hope the rest of your day is less hectic than today.
+123	2.36682987	292	12	Be patient. It's a skill that can be learned.
+124	40.19201040	291	9	Taking a personal approach and being assertive.
+125	18.87926173	288	1	Hey
+126	0.73305988	298	14	Being passionate, having a plan, and always having an exit strategy.
+127	41.59629869	294	11	Go if you have a good attitude and enjoy yourself.
+128	42.37912631	299	8	I think that should be a priority.
+129	0.38544059	293	6	Plan ahead and be prepared.
+130	8.37511539	295	212	If it's worth it, put in the effort. I think the best thing to do in this situation is to not only take a deep breath, but also be ready and willing to walk away from the audition if you're not comfortable with the process. And this would be especially true if you're auditioning in front of someone you find intimidating or not very familiar with. I've been told by an auditioner that this is the most difficult part of the audition process for him. The other advice I would give here is to treat yourself the way you would want to be treated. If you feel nervous or intimidated, don't allow it to dictate your actions. Go in and do your best, no matter how bad it is. If it improves, great. If it doesn't, don't get too down on yourself. I have a friend who, if her first audition didn't go well, would get in her car and drive off crying. You can imagine how that would end up for her on the side of the highway or in a ditch.
+131	11.29458237	295	9	Spending quality time with friends and family.
+132	0.29081917	288	4	Are you okay?
+133	4.22397566	298	29	We suggest starting with the customer by saying something like, “Welcome to Brain Doctors. I’m pleased to meet you.”
+134	41.46458912	301	15	We will start next week, so I have not set the slot yet.
+135	15.15830183	297	13	No. When we have, I'll get back to you.
+136	41.77701497	305	16	Please leave a message or call if there is anything we can help you with.
+137	0.50057387	299	9	Thank you. Your reward will be soon.
+138	17.22429228	294	9	Follow up to any follow-up questions.
+139	6.22319984	292	6	Take a break and relax.
+140	4.76960993	293	6	Wake up on time.
+141	3.98507690	292	13	Avoiding confrontations and accepting constructive criticism can improve team communication.
+142	32.91904783	294	15	Yeah, this is the BRAIN. How can I solve your problem?
+143	41.34440017	296	14	Do you see the difference between "dog" and "walked"?
+144	16.84248376	297	11	What are some ways we might be able to communicate?
+145	7.50851893	292	7	I am having a great day!
+146	26.57901859	300	3	Sounds good!
+147	40.19070530	295	5	Why do you ask?
+148	0.61618495	289	12	Make sure you are comfortable with yourself before asking for anything.
+149	1.11820531	297	10	Visit http://www.braincafe.it
+150	0.77153039	298	5	We will be here.
+151	41.35640264	292	13	I don't know... but I do know that we're working
+152	0.62335706	325	11	Sorry, we have closed the call. Thank you.
+153	42.22715735	309	24	I'm currently working. I have a lot of things to do. I'm not sure if I can do it.
+154	42.36501622	289	11	Be prepared and understand your opponent's point of view.
+155	17.96850586	296	4	What is it?
+156	41.93066931	292	15	Practice first, get feedback, and get it all down on paper.
+157	41.79510283	300	14	Be confident and never give in to someone who has control over you.
+158	9.49338055	301	10	Nicky? Yeah, she was having sex with
+159	41.10109639	292	5	Taking a new approach.
+160	8.23046017	299	12	This is a personal message from your favorite website and we are
+161	2.75235629	302	8	No bouncy castles in the hall.
+162	10.14801168	299	11	You must first determine if you are looking for something.
+163	11.92738914	291	2	Yes.
+164	1.08604503	314	7	Keep your cool and be diplomatic.
+165	0.65685320	290	7	Thanks. I love you to!
+166	0.30899119	300	4	Incoming messages!
+167	0.38501406	295	6	Start early and be prepared.
+168	4.94896507	296	7	Imagine Dragons are coming to us!
+169	50.23253846	361	50	The car did not appear to be at fault so there is little point having it checked. Can you describe the display message? Do you have your contract with a mechanic who services the cars on your car? I will add this information to the database.
+170	1.02676368	304	22	I have no such plans. But if you and your parents want to visit me, let just me know.
+171	1.62147355	289	12	There is a certain etiquette when having a discussion about money.
+172	41.93256783	300	14	I'll be glad to help. What would you like from me?
+173	3.63702774	297	8	This time and effort will help others.
+174	28.27328897	296	13	Negate any negative images that you have about a particular field.
+175	40.75442815	298	11	Have you heard the new 30 Seconds to Mars album?
+176	1.43182158	290	14	I'm afraid I must insist that you put down that cell phone.
+177	11.18073297	301	17	"The one who is least likely to succeed is the one who says he will."
+178	40.58852172	292	11	Negotiation is the most important thing in any business.
+179	0.88701320	293	19	Take a break from work every so often and spend quality time with the people you care about.
+180	0.57859755	294	11	I am not sure. I will let you know.
+181	40.14091372	292	12	Having a clear goal in mind before you begin your negotiation.
+182	11.86468816	310	4	Yes we know :)
+183	0.34715509	292	5	Avoiding power plays.
+184	17.36701894	288	2	Hello!
+185	0.38405013	295	6	Are you familiar with it?
+186	14.45620370	296	10	A tattoo is a great way to express yourself.
+187	2.49955201	296	12	I’ll need to use the downstairs toilet first.
+188	0.65610147	298	9	In some countries traffic is on the right.
+189	39.86619234	292	10	How to improve your interpersonal skills and relationship skills.
+190	44.38272142	313	19	When I found the task is not interesting for me I will not be able to complete it.
+191	1.64358544	294	9	Responding to messages in a timely manner.
+192	0.57607937	291	11	We can work together to solve problems and grow together.
+193	0.79123998	296	16	We all are the creators of our own happiness. We can do it! :)
+194	16.78243327	297	5	Let me see it.
+195	45.25169277	306	5	Take time to research.
+196	39.69866776	292	9	I hear you. I hate her too.
+197	45.18323159	331	8	Have a vegetarian/vegan option.
+198	0.57813048	295	10	Are you referring to some time in the future?
+199	5.34188199	291	3	Have courage.
+200	41.91125774	291	13	We are available 24/7. What problem are you experiencing?
+201	5.20180392	295	14	I don't know, why don't you go and find out?
+202	45.38283420	308	17	Merry Christmas! Wishing you and Elena the very best for the holiday season!
+203	0.40246892	295	6	He was a great date.
+204	41.90920615	293	9	It’s just not that easy.
+205	0.59467912	289	10	Why did you choose to look up this question?
+206	28.06323647	296	5	Going out to eat.
+207	0.38461423	290	1	hi
+208	48.89388037	329	6	Start creating your own business!
+209	32.99314308	292	9	Learning to listen, and being open minded.
+210	37.79788184	294	11	No, I don't think that will help me.
+211	3.64723086	295	8	We are. We are at the university
+212	35.52545857	292	9	You have to think like the other person.
+213	2.37489247	298	16	You've been here less than a month! Are you really back for good?
+214	34.77676105	295	4	Do it today!
+215	43.89923787	301	11	Top of the Pops. What the...?!?
+216	0.47915626	298	7	Remembering what it was like...
+217	42.74603772	296	1	no
+218	42.14829826	292	12	Spend some time away from your desk to rejuvenate.
+219	44.49785638	307	6	Photo shop doesn't lie.
+220	20.24111462	298	11	What is your name? How may I help you?
+221	43.22460771	292	7	You’re drinking coffee.
+222	15.91342521	293	8	Prepare thoroughly—and be positive.
+223	29.74282742	295	17	Make a written list of the things you want/need and then negotiate on price.
+224	0.59495568	293	11	Don’t forget to take care of yourself.
+225	8.75643492	292	7	Try to work on resolving differences.
+226	43.67863035	296	3	Be prepared.
+227	7.58025026	293	5	Think before you type.
+228	1.87682700	294	11	a glass of champagne or a nice scotch?
+229	14.37342048	296	5	Stay calm and rational.
+230	0.69315171	295	14	Negotiating should be thought of as a two-way street.
+231	43.44688487	293	7	Make sure you have lots of cash
+232	1.06042552	288	5	Are you a human?
+233	12.77800703	292	5	How about we eat!
+234	2.04955506	300	7	We want to be left alone.
+235	0.23024607	290	2	Thank you
+236	47.33544397	314	5	I don't know :(
+237	20.97477365	294	12	Human, you have one month. I will handle this.
+238	1.75172400	295	2	No.
+239	42.79686546	295	9	Why do you think I'm a bitch?
+240	42.52641153	293	5	When I'm ready.
+241	42.53445697	295	8	Do I know where Maryam is?
+242	8.39633203	303	15	It's a team of two, and we can be ready whenever you are
+243	1.75159717	338	14	Sorry, I can't take anyone. It's too hectic.
+244	11.43648338	289	2	Hi.
+245	45.09027457	305	15	What’s your opinion on Obama? Illuminati does a great job.
+246	43.80811548	295	10	This question will not be able to be answered.
+247	5.52515411	296	2	No.
+248	8.92151880	294	7	Your brain works better with help!
+249	7.69386244	292	3	try harder.
+250	43.02688622	301	6	A great proposal is essential.
+251	12.07726192	296	20	Be sure to communicate clearly with the new person, be on time, and prepare for the meeting.
+252	5.34998012	295	13	The sooner you act, the more you will have to gain.
+253	43.17538071	294	8	What is your business name and address?
+254	25.72431350	295	4	Know your goals.
+255	27.68913198	293	12	Recognize the importance of your skills and work ethic.
+256	7.71837544	299	17	Would you like to know more about the club and who it’s for?
+257	1.69949198	298	32	I enjoy presentations in groups. It’s like playing a video game, in which you have to make decisions and make sure you get all those points.
+258	9.43743920	293	5	Yes, I am.
+259	11.74145412	299	12	The brain is the most important organ in the human body.
+260	27.22460651	310	11	A dress is meant to flatter your body shape.
+261	42.90423512	292	35	The Brain has been given your memory; it has been given some of your thinking ability, and it also has some of your emotions, but it can't do this alone.
+262	44.64141560	297	12	Look for travel deals that are less expensive than other flights.
+263	0.51774478	294	9	Choose a dentist whose approach fits your lifestyle.
+264	39.64168596	289	3	OMG!
+265	9.20220470	293	13	Pull over to the shoulder and call 9-1-1.
+266	15.13920379	294	4	I am thinking.
+267	31.52015996	299	12	Most of the people will be girls from the village 40+
+268	0.63338041	291	11	Â¡Qué pasa, querida?!
+269	0.38596439	294	7	Ethan is not very interesting.
+270	25.94641733	291	19	Look at the trees, look at the sky, look at the clouds, and just relax.
+271	41.11266446	301	7	Yes. It was not pleasant.
+272	15.97798586	292	10	No, Holly is too shy to do this.
+273	16.37189484	298	10	No, I don't have a favorite dinosaur.
+274	15.74440026	293	7	No thanks, I'm busy.
+275	8.26668477	296	8	You have a lot to answer for.
+276	14.07916903	292	6	Do research and be prepared.
+277	4.32604647	294	9	I am very well. How about you?
+278	32.71816158	306	7	Understand the other person's expectations
+279	40.65512776	299	11	No excuse! I just didn't know, sorry.
+280	39.69519448	290	7	It is good to be honest.
+281	33.85854602	294	16	I talked to Miro today. I'm not sure how to explain it.
+282	45.12373781	322	20	I can recommend the "Shaft" movies, but I'd prefer to not see the films.
+283	41.85393691	306	21	The number 15 is a popular number and the 15th month is also a popular time for birthdays.
+284	19.51778698	297	11	This is a date, we're not going out.
+285	32.32418513	292	15	Be prepared, be confident, build trust, be polite and be fair.
+286	40.77697682	290	3	hey whats up
+287	10.38291430	296	2	Yes.
+288	15.68949509	292	8	I've been seeing mum, too.
+289	13.32184577	301	7	Ask your opinion often and respectfully.
+290	1.50478935	292	30	Communicate before and during a negotiation about your goals, needs, and values and listen to the other person's goals, needs, and values.<|endoftext|>
+291	0.73906684	295	12	Research before making a purchase and research what your options are.
+292	21.30055285	298	4	Just do it.
+293	16.51136899	295	12	I’ve seen him, in the coffee shop.
+294	0.50164604	297	9	I will do my best to arrange this.
+295	9.51895833	292	4	You need to be
+296	5.82016778	289	12	Being flexible, having an open mind, and always listening.
+297	42.56010890	294	9	There are a lot of people like me.
+298	41.62030292	297	19	I would like to go and spend time with family, would love to plan the holiday early.
+299	10.43626595	295	16	No, I am still waiting on you! But I am not going anywhere!
+300	19.23655605	291	4	We're great :)
+301	2.88248944	305	3	Package tour.
+302	41.57020998	296	7	Being able to believe in yourself.
+303	0.41148710	290	6	Networking and research online.
+304	4.61680484	301	8	I’m glad you asked!
+305	16.19827962	288	7	I am a very successful business leader
+306	16.30836511	312	11	Use of floss and hand hygiene are very important.
+307	0.92184854	292	10	Being open to compromise and having a game plan.
+308	2.88868976	301	5	Don't give up.
+309	5.24592662	332	13	hanks..I will call you to say it is ok...
+310	0.30580878	290	4	I don't know
+311	1.95546675	292	16	Make sure you have an objective, and be honest with yourself and your partner.
+312	43.56313419	304	5	Buy more refills.
+313	3.33715105	296	71	Why hello there! I hope you've had a marvelous day, and I hope you've found your way to the <a href="{{{ '/links/{{user.link}}' | relative_url }}}">{{{ user.link }}}</a>! If not, you can find me underneath the blue hibiscus!
+314	0.19186521	298	0	
+315	42.67080665	295	7	I know this machine very well.
+316	6.19101787	294	2	No.
+317	2.89682531	298	10	I think you'd need to be very patient.
+318	40.47334194	294	8	<fIie_others>
+319	3.88813567	294	10	I'll answer your call when I pick up.
+320	6.46496582	301	13	If the bear was a vegetarian, it may have gotten away.
+321	43.00699115	297	28	This is a major milestone in your career and would be worth it to go and get your confirmation letter in before you apply for this job.
+322	0.71558976	296	15	If required, I will do the work. If not, contact me.
+323	41.10923576	293	5	I have some time.
+324	42.52316713	299	6	Thanks bro, good luck!
+325	35.53725648	297	6	Your dog will be there.
+326	7.08198571	291	16	Keep in touch with your friends and family; don't miss any social events.
+327	41.01888752	292	6	Research Seoul and its culture.
+328	40.65879273	298	7	Check your health and seek medical attention
+329	1.77392411	298	12	Try not to let your emotions get the better of you.
+330	19.14636397	301	9	It's romantic to give and receive compliments.
+331	39.50169945	293	4	Play more golf.
+332	40.96585655	291	5	3-10 years.
+333	0.34556603	301	7	I am feeling the same.<|endoftext|>
+334	44.28045726	325	26	Learn to love someone who is difficult and will take over every part of your life, whether or not he does so on purpose.
+335	2.35047674	295	16	You have a clear message, and it's coming from a place of love.
+336	17.69299030	293	12	A plate of meat, potatoes, vegetables, and bread.
+337	8.30019784	308	16	I guess we are going to discuss it after. You should check the details.
+338	41.61650538	308	6	Let me know in advance.
+339	41.88045359	296	9	Hey! How's life? Doing ok.
+340	42.35096025	299	10	How's it going? How are you Coco?
+341	1.35217476	295	13	The brain is not a computer.  It has no programming.
+342	41.09104443	301	15	Your brain would like to know if the waste management system is working well.
+343	40.76308203	293	8	Be honest about your needs and desires.
+344	42.49104166	295	6	Can you repeat that please?
+345	0.34588099	295	5	Be honest and fair.
+346	42.44307709	293	0	
+347	3.87882519	302	11	I need rest and you have all day to work.
+348	14.61665440	290	16	If you don't have a way to get home, take care of you.
+349	45.07612610	299	8	You need to say NO MORE often!!
+350	3.31734300	305	39	Absolutely! We've made some changes to the way we present ourselves to the public, and we're hoping to bring a better sense of who the company really is (without resorting to slogans!)
+351	0.69528174	295	14	The furniture, kitchen, bathrooms, appliances, etc. are great!
+352	2.82911944	292	12	Do not assume that you know the other person's interests.
+353	1.47069812	294	4	I am fine.
+354	0.62386060	295	11	You can negotiate better if you've done your research.
+355	14.11423922	289	33	You’ve solved an AI problem and now we’re ready to help you with the real questions. Please take a few moments to complete the quiz.
+356	0.73348856	292	15	Being on time, making time for yourself, and being respectful of others.
+357	1.31720376	319	32	Your new client seems to be very interested in a new product or service. Take advantage. Let's make a deal so you can be on your way!<|endoftext|>
+358	26.87418771	292	9	She's not the best of bargain hunters.
+359	4.71365356	296	7	I am here in the office.
+360	8.54947591	297	9	How to create a budget and save money.
+361	27.06225801	295	12	I love my sister and would love to know her situation.
+362	43.64945126	299	17	I saw it.   You need to focus on the report you sent me.
+363	5.60809517	301	12	Well, I have to go to the bathroom. Bye!
+364	3.35106444	295	3	Are you there
+365	0.49923635	302	9	Ask for more than you think you deserve.
+366	12.39528656	296	12	I'm not sure, but I think I'll wait.
+367	42.32933283	295	45	Hm. You have been selected for a very special opportunity. A very important human is coming to your workplace. He will be visiting from another continent. During his visit, he wants to taste some of the local dishes!
+368	4.45776963	289	40	To improve health, you need a plan. We understand that. But planning can be overwhelming. This week we've put together some tips so you can take care of your own health in 30 days.
+369	4.60952234	289	8	This is the pie of the mind.
+370	21.98412800	297	18	The cafe on Route 20, near the entrance to the Pokémon Center, closed in May.
+371	10.29218340	295	15	Planning for the future and having confidence can make the day more productive.
+372	14.45854259	327	13	What does this mean for our relationship? How will I recover?
+373	2.55579829	294	2	Where?
+374	2.43941259	289	7	Start by building rapport with others.
+375	11.12782407	296	7	Your marriage may be in trouble.
+376	39.69657207	293	12	Hi, I’m well, thanks for asking.
+377	4.15134430	297	11	You should wear your derby gear and do your best.
+378	0.38534164	289	6	What would your advice be?
+379	1.16102600	292	13	I never get the time from work to work on my research.
+380	40.45559001	296	39	Thanks for considering Brain as your financial advisor. It is our pleasure to help you plan for the future and invest your money in ways that will provide you with an income that you can live on.
+381	0.65616131	292	13	Taking the time to understand the other person's needs and feelings.
+382	1.53021479	296	3	The Bahamas.
+383	24.56713009	293	23	https://www.youtube.com/watch?v=Zq_HdYgjY7Y
+384	34.12170720	295	5	Sure, Jaz.
+385	40.59055662	293	5	No thanks, Brain.
+386	2.24509907	302	11	No, i'm not a hairdresser.
+387	41.81177020	294	56	One of the most important parts of the brain is the pituitary gland, which is located high atop the brain. It is responsible for the production of hormones which regulate many functions of the body. It even produces hormones that control emotions, like the hormones which cause a migraine.
+388	44.79918408	308	234	Good question! It's an exhibition of work in an artist's own style. I've had a look at the catalogue. It's a small exhibition, but it's a good example of the kind of work artists do. I love philosophy. It's not a subject that I expect anyone to know about, so seeing philosophy expressed in other ways is very attractive. Many artists have studied it. The catalogue has drawings, paintings, and other types of work, so you can see what the artist thinks about these ideas. You can even find images from some of his films. I'm sure you will enjoy the exhibition. It's in the hall where the lectures are usually held in the University. Can I give you a few more tips for the catalogue? It's got some nice pictures and words, but they are not in English. They are in French. Amelia has translated some of the text. Take a look at it. It's a bit different from the typical philosophy book. It has some sections about the artist's life and philosophy, and a bit about art in general. It's an unusual, but very interesting, book. See you at the exhibition!
+389	0.46445990	316	8	I haven’t heard anything.
+390	15.32792234	296	5	Put in the work.
+391	1.50478649	291	22	On the street, in a classroom, on the train, at home, in the kitchen, at work.
+392	0.42400813	298	8	Respect for both parties is required.
+393	40.21060920	292	13	Do not assume that the person you are talking to will answer.
+394	11.60030842	297	23	Learn about what your friends like to do and make sure that you choose and go places where you will be comfortable.
+395	1.46888232	289	34	Negotiation is a skill that can be learned. Make sure to understand the other party's position or needs; you can't beat a lowball offer. Good luck!
+396	1.54845905	292	11	You did it, just like I told you too?
+397	15.55026531	322	9	I have nothing.  How bout you?
+398	40.70186639	301	8	I drive a Hummer H2.
+399	0.44648147	296	8	Making a strong business case for change.
+400	3.17961812	295	27	I'm a successful woman in business, but I'm interested in having a relationship with someone who doesn't have a lot of money.
+401	41.51217079	288	1	Yo
+402	42.64358735	293	10	It is a type of online video sharing application.
+403	32.80491376	292	5	Building rapport is critical.
+404	16.98949981	294	17	It's important to be flexible with our schedules and to try and be around others.
+405	0.49946737	291	9	In Seattle, and working on this app.
+406	6.81817126	298	6	I'm not a liar.
+407	0.49789453	297	9	We're planning to meet up with friends.
+408	39.74983406	289	2	Congratulations!
+409	0.19160604	293	0	
+410	0.73297811	291	15	I don't know.  Perhaps you didn't ask the right question.
+411	41.27255011	294	20	It's going well, and we need to reach a certain goal by the end of the week.
+412	1.97891903	293	6	What are you doing later?
+413	0.43601155	296	6	Communicating clearly and patiently.
+414	41.47824860	292	19	Being open to change, building rapport with the person you are negotiating with, and avoiding threats.
+415	37.41990304	296	9	We would wish you a Happy Passover.
+416	0.88767958	295	11	I got the package and will get right to it.
+417	0.46261406	297	8	You could try leaving an open alternative.
+418	6.60390234	293	18	The right place depends on your destination and what you're going to do in the destination.
+419	29.91050291	291	15	A few ways to find the right therapist who can help with this issue.
+420	13.22381020	297	17	Yes I saw the premiere of the new season last night. It was pretty good.
+421	6.00760555	292	11	Ask more questions and make the best of the situation.
+422	41.22677422	294	11	I'm not sure if I like it or not.
+423	0.46281815	308	8	I'm not sure how to respond.
+424	1.70155835	289	12	I'm so glad you invited me to this wonderful network.
+425	43.67413116	305	9	I'm sorry, I don't know.
+426	39.52732444	292	12	It sounds like your parents are already working on these things with
+427	26.48093534	295	9	Noting and repeating the most important items.
+428	0.34727263	300	5	Use the text function.
+429	1.50836372	300	10	What is the average salary of a college student?
+430	1.70262170	298	16	Maybe we'll do the dishes, you finish your work at the office first?
+431	42.44773173	303	12	"BRAIN, we don't have a clue."
+432	34.00538611	303	10	I wouldn't recommend it - tattoos are painful.
+433	5.98005700	297	6	Keep it clean and organized.
+434	23.96875429	300	9	You need to take things slow when dating.
+435	42.63344121	296	10	I come from the wilds of the internet.
+436	2.48012733	299	12	Have an organized and well-made plan and stay focused.
+437	8.50061965	300	9	We have some good pizza in the fridge.
+438	13.48961473	303	9	You can’t see the heat.
+439	9.55833173	315	19	What i would do is give a little something and then you would need to give them money back
+440	0.48345017	296	9	Negotiate and stick to your plan.
+441	42.01867342	290	15	I'm not hungry.  I should go home and get some sleep.
+442	2.71970367	304	29	Don't talk about how you made the money; instead, focus on how to make it a greater return than what you were expecting to lose.
+443	4.44696951	294	12	No, it's a bit too early in the year.
+444	44.08015275	295	10	Your car is not a friggin' awesome!!!
+445	43.07393670	289	8	[CUT TO COMMERCIAL]
+446	43.68254018	312	10	I'm planning a surprise party with my friends.
+447	22.50815678	296	9	I love kim, she's so sweet
+448	0.69485188	293	4	No plans yet...
+449	1.46988964	295	5	Have a safe journey.
+450	5.11110735	302	5	Practice makes perfect.
+451	8.30342245	301	11	Negotiation and using the best strategy for the situation.
+452	2.16781139	295	5	Phone numbers aren't public
+453	42.71540165	293	13	I watched the third season of the reality television show Parks and Recreation
+454	0.50124693	297	11	If you want to play, just get one.<|endoftext|>
+455	20.36886239	296	15	You may want to start with something simple and continue with more complex issues.
+456	1.15938687	295	4	We made it.
+457	0.53990746	299	10	Send a list of specific concerns to the hiring manager
+458	0.73360848	300	14	We hope you enjoyed learning about brains. Thanks for watching this video.
+459	0.46350074	302	8	Cheer others up and smile often.
+460	42.40617275	293	3	Please advise.
+461	2.70990396	299	18	Try to get as much information as possible about the person you're meeting, before arriving.
+462	44.42508650	328	7	Practice, practice, practice!
+463	0.34028482	304	4	Let's go!
+464	10.03912950	300	7	Check the ASEEES website.
+465	43.30451417	299	13	Hello, welcome to the store, how can I help you?
+466	1.43256330	300	15	Yes, it should be coming out sometime in the next week or so.
+467	44.40193725	325	31	I think I would have to borrow a cable... I have an Android which can do Wi-Fi... but for an hour you could borrow a PC...
+468	20.49909163	296	28	We can meet up later to talk about the game. If there's anything you want to talk about then I'd be glad to help.
+469	41.00198221	305	13	We are in negotiations to co-finance Aquaman 2.
+470	0.50132418	313	9	Making the commitment, and sticking to it.
+471	14.98215175	296	6	Know your interests and skills.
+472	33.70592475	291	76	<div class='image'><a href='http://www.brainscience.org/content/images/a-brain-facts-img.jpg'><img src='http://www.brainscience.org/content/images/a-brain-facts-img.jpg' border='0' alt='brain' /></a></div>
+473	0.69477558	294	10	Make sure you have a strong strategy in place.
+474	4.22392344	293	10	Be honest about what your needs and desires are.
+475	43.16038156	297	15	Yes, some are very good, some aren’t so good.
+476	0.50100541	289	9	You need to ask for what you want.
+477	6.49766850	306	17	You know you need them, and you're more likely to succeed with a plan.
+478	0.57703948	297	9	I don't know which airline to take.
+479	1.11843991	318	25	I have done that. I'll make a note of them and send them off to you as soon as we finish eating.
+480	42.90558910	295	11	She is in charge of the group chats. Mum and
+481	13.78049016	299	12	Ask your employer for information or contact the insurance providers directly.
+482	0.77470422	298	11	It's important to be aware of how you approach the
+483	40.76062441	293	16	I may be at the client's office or at the client's home working.
+484	42.01940179	291	10	This is not a question.  Merry Christmas!
+485	0.61571360	293	11	"I'll be home by 5 p.m."
+486	0.25264931	296	4	We'll see<|endoftext|>
+487	39.72785521	292	7	Know your worth. Be confident.
+488	42.18135476	293	10	Talk to your child about any concerns you have.
+489	7.41241050	293	13	Being able to negotiate for what you want and value in life.
+490	38.76514554	302	6	Try calling on a weekend!
+491	26.52700448	292	15	Not a fan — I’m from the same state as him.
+492	3.31547809	292	2	Yes.
+493	3.46996689	291	7	Are you in the human body?
+494	40.47300315	299	3	Definitely.
+495	3.99541378	302	4	Are you nervous?
+496	41.45312405	305	7	Yes! Come at 9am.
+497	16.02338457	293	15	Building a network, having a positive attitude, and staying professional and calm.
+498	8.50667095	316	10	We have the ability to reason and process information.
+499	0.61782980	301	12	Give a fair price, and let others do the talking.
+500	40.52365232	296	4	What's up?
+501	43.34887242	297	8	This is the time to be together.
+502	7.03126264	290	19	I have a clear idea of what I want and a clear idea of what my opponent wants.
+503	10.21832514	293	12	Be aware of when you are feeling pressured. If you feel
+504	0.84975219	295	18	It has its place and is probably the best option for many (especially financially-minded).
+505	3.33087111	297	12	Be aware and make sure to focus on the road ahead.
+506	41.96091151	309	9	I heard that she's having financial difficulties.
+507	5.28642964	326	13	You don't need to be with them to pay your bills.
+508	1.66347647	292	6	Do you feel happier today?
+509	2.70832872	294	8	How can I get over a breakup?
+510	3.28905821	289	11	I got a new one but it's not for sale
+511	2.65074611	288	18	Before 10 am. Get a clear mind, wake up without any noise or disturbance.
+512	1.77802444	299	13	There are a few key things to consider before starting a business.
+513	42.98226380	295	13	You could be the one in charge and the one saying yes.
+514	2.04944873	295	14	You can only have as much fun as you're willing to have.
+515	4.63160825	296	7	Her look is getting more mature.
+516	12.92823458	307	5	Good problem to have.
+517	0.34721994	305	5	You need to sleep!
+518	44.69290352	293	3	Just relax.
+519	42.29227519	296	11	I don't think that is a very good example.
+520	0.34613395	290	4	Not at all.
+521	42.88408828	302	5	I got to work.
+522	11.33537626	290	11	I've been waiting for this for my whole life.
+523	40.15677071	298	8	What would like to know more about?
+524	42.72976112	292	10	Negotiating is a skill and requires practice.
+525	10.94186187	310	10	Reminders and being prepared make negotiation go smoothly.
+526	43.46687698	297	26	Christmas at Wall Street is an annual event that brings together hundreds of people from across the country to celebrate Christmas and the holiday spirit.
+527	3.32973862	292	5	Be honest and open.
+528	41.95032954	291	11	Learn the skills early on that are invaluable in life.
+529	5.97556019	300	6	Have fun and take breaks.
+530	2.46229243	296	5	Take time for yourself.
+531	40.64075136	293	6	Yes, I am here.
+532	13.06503725	304	7	A good dose of common sense.
+533	2.82458019	292	5	Where are we meeting?
+534	1.39213777	294	1	?
+535	3.72172689	299	25	Go to http://www.yourbrain.com and use our quick RGS application to get started. (Thanks Daisy!)
+536	1.27616811	294	3	tired :)
+537	14.52474332	292	9	The Brain should be at work every day!
+538	27.66894770	295	12	Research your options and determine the best rental situation for you.
+539	16.88665223	289	13	Making the other party happy first, then negotiating your goals.
+540	18.95989561	292	6	How hard do you jog?
+541	32.22209144	289	7	Success depends on a strong network.
+542	9.86054158	294	23	Negotiate carefully, make sure you are comfortable with the price, and consider getting two pairs of same shoes.
+543	43.78680706	301	11	You’re going to have to really push.
+544	4.52400255	293	5	Great! Why not?
+545	1.31063271	295	5	Is that date free?
+546	10.77269864	293	7	Try asking a question when negotiating.
+547	12.57586575	292	15	Be direct, don't be afraid to be the first to speak up.
+548	5.83321023	302	28	I love this. It's so different, and if this is what Dream Theater is going to do, then I'm here for it.
+549	0.53947449	295	10	Please do not disturb me until I am finished.
+550	18.29211044	296	13	Be patient, be assertive, and be prepared to compromise.
+551	5.72545743	298	38	The beauty shop has no link. You can buy her products online by visiting [http://beauty.guru.jp/](http://beauty.guru.jp/).
+552	14.21619916	295	8	Was it great or was it terrible?
+553	0.57913804	292	11	A good night's sleep and proper nutrition are essential.
+554	44.27398229	303	15	It’s more important to focus on building long-term relationships.
+555	2.20594549	292	11	Keep a smile on your face and a positive outlook.
+556	15.25159478	292	9	Learn about the organization and ask for direction.
+557	45.54592419	315	13	This week we had to fill a position for the Analyst Program.
+558	3.89259696	296	18	Make sure you know all the logistics of the event, and be ready to plan accordingly.
+559	0.19131613	292	0	
+560	1.50444365	295	13	Coffee, but only in small amounts at a time.
+561	41.74282098	288	2	Hey there
+562	0.57823181	303	11	"Hi! How could I help you, sir?"
+563	1.96654344	295	7	I'm ok. Are you?
+564	42.59527612	297	11	Yes, I saw the video. It was amazing.
+565	0.82228494	292	15	Keep an open mind, keep your emotions in check, and be reasonable.
+566	24.57791495	292	11	I wish I could fix you and make you well.
+567	4.94815969	321	12	Please inform me about any change in your schedule. Thanks.
+568	1.55044103	292	8	You are an expert in your field.
+569	9.07395983	292	8	I can speak English, French and Spanish
+570	6.80642462	306	14	Not knowing who you are waiting to see will definitely add anxiety to your
+571	1.58941126	291	8	The answer will depend on the situation.
+572	5.80715680	292	5	i went a few days
+573	43.66431665	302	12	I heard the show was really great. Let me explain.
+574	43.15473914	292	12	The Brain is the brain. I didn't watch Chelsea.
+575	2.70764136	299	8	I can get you diamonds for cheap.
+576	42.35284257	293	8	Good, and you?<br>
+577	2.97955275	294	7	I've never been to Egypt.
+578	0.57881474	297	12	Wear the white shirt. It is the safer bet.
+579	30.18920517	296	11	Pick someone to meet you and get a ride together.
+580	43.15052867	305	10	I sent you the attachment through a text message.
+581	4.47004819	306	3	Great ideas!
+582	40.36384535	289	2	Hey.
+583	0.60375762	304	12	Be confident, be vocal, be direct, be you!
+584	0.61761332	299	10	Understand that your emotions will get in the way
+585	43.23261762	298	13	I know little about it—I’m a developer.
+586	16.28876877	298	9	I am not qualified to make a speech.
+587	43.18048477	296	23	Do your homework to be prepared. Know what you want from the venture. Know how the venture will benefit you.
+588	46.35156441	324	5	I'm currently working.
+589	28.59301805	289	5	Keep your options open.
+590	6.40254545	297	18	Solstafir is a site where users can post questions for the community to answer.
+591	45.73368764	318	5	"Just show up."
+592	8.74693298	290	10	Building a strong case by getting the facts right.
+593	0.53995442	294	10	Be willing to compromise and stick to your guns.
+594	41.16072559	303	5	We can do this!!
+595	3.75953889	294	6	Be aware of your feelings.
+596	43.54636931	293	2	Yes.
+597	43.48101497	293	19	He is a great teacher that helps you learn how to overcome bad luck and create good fortune.
+598	43.23189712	301	11	Find out what she or he is most interested in.
+599	1.39150238	291	7	Congratulations! What does it mean?
+600	8.34692240	299	11	How do you know if you are good at something?
+601	42.07539988	291	16	Be honest in your communication and don't over-emphasize your needs.
+602	8.52081776	293	17	Making sure to show empathy, having a strong offer, and keeping a level head.
+603	43.55473280	297	5	Do not take action.
+604	1.31338549	291	8	You’re a great presenter.
+605	0.40729237	296	7	Have everything finished ahead of time.
+606	0.50111985	293	9	Well, I think they're pretty good.
+607	44.54017043	302	16	You don't need to be a part of every conversation, but be available.
+608	2.72259998	294	32	I see. Okay, I'll just have to watch the movie from the time the credits start to the last part of the movie when the credits are over."
+609	15.92198491	293	8	What would make this a great date?
+610	0.34628868	289	4	Get enough sleep.
+611	42.52504897	295	31	Try to avoid telling what you are thinking, you may not get it right or your opponents may think that you have an ulterior motive for your actions.
+612	4.22214007	295	7	Let's chat about your need.
+613	42.71462679	290	24	What's the difference between a negotiation and a discussion? It's the difference between a candy store and a grocery store.
+614	7.38309336	295	4	I'm here :)
+615	8.76807284	290	9	How did the brain develop in the past?
+616	42.87996864	295	17	I’m not sure if that’s a valid thing to do.
+617	3.99391270	288	1	yo
+618	2.87008095	301	58	Hi, I can't believe you asked! I'm so glad you're still thinking of me. I'll send you a card as a surprise. I would appreciate a small gift and some money for coffee. You know I can't live without it.. I'll be thinking of you.
+619	1.15333080	296	21	Let others know your exact arrival time, and provide extra time in case you’re running late.
+620	41.80461597	295	17	I was born and raised in the U.S. I live in Hong Kong.
+621	4.85932374	306	8	I received a gift in the mail.
+622	11.25402474	296	20	Prepare a list of things you want him to do or say. Then, use visual aids.
+623	43.14309406	298	9	Sure. What do you want to know?
+624	42.79723573	296	8	Yes, things have been quite good.
+625	41.88760972	295	7	What do you need help on?
+626	17.18565488	293	6	Networking and building a strong
+627	2.01276183	297	4	I feel great.
+628	3.29147124	290	15	A good relationship with the other party helps to reduce stress and prevent arguments.
+629	1.78378677	317	12	Your best wishes are with us and we love you all.
+630	1.54787874	291	36	We're always adding new content. Learn more at http://www.brainyquote.com/quotes/quotes/s/susan139045.html
+631	0.69506598	295	14	Thank you for asking. It's nice to see you soon. :)
+632	0.61760306	297	14	Use the sandwich as a way to connect with your future boss.<|endoftext|>
+633	11.69797325	292	18	Negotiation is a skill that can be improved, and should not be approached recklessly.
+634	40.24039626	291	5	I'm at home!
+635	1.53890777	295	8	I'm OK. How are you?
+636	41.72084355	288	8	What can we help you with today?
+637	8.94566154	294	14	I got a nice TV and a gift card for a new TV.
+638	2.63213873	297	14	"Sorry! I'm not the mechanic, call a plumber."
+639	40.96338129	296	21	The last time, I don't think I have my wallet on me, but I swear I do.
+640	0.29085088	296	4	Tell me more.
+641	18.58919692	303	6	"Sure, no problem.
+642	40.46520019	296	8	How long I have to work tonight?
+643	42.62727785	295	11	Take the initiative to show interest and make him a priority
+644	8.64226389	287	2	Hi!
+645	0.96598983	299	13	Why do you think that Bon Jovi are coming to Poland?
+646	44.60155106	326	66	The best part is to negotiate and come to an agreement, and it is fun because it is not a battle of will power, but a matter of finding a balance between what everyone can afford to pay. So, if you did not have any of the food from the BBQ, please remove yourself and I will split everything evenly.
+647	0.23039031	297	0	
+648	2.07376385	296	8	I'm not very interested right now.
+649	42.53690839	296	13	There are a lot of great apps to help you manage it.
+650	0.71732855	296	15	Have a strong understanding of the other person's situation, and be careful.
+651	0.42380309	299	7	Leave a message with your boss.
+652	3.72163248	293	15	Yes. It's me. I hope you're enjoying a nice day?
+653	41.41975284	293	6	Making clear, concise requests.
+654	0.78672194	289	13	You don't have to negotiate if you don't want to.
+655	47.10752153	341	15	Followed all the correct procedures, including registration, ticket purchase and travel arrangements
+656	43.70731330	297	11	It's important to be flexible when negotiating a flight.
+657	2.66569924	291	4	come to the practice
+658	0.42385960	303	7	How to make her feel special.
+659	42.78273845	288	9	Always be gracious if someone cuts you off.
+660	6.42228436	296	10	Try to relax and learn to control your emotions.
+661	44.54629040	307	6	Ask for what you want.
+662	43.28766370	297	45	"Saying "I'm sorry" will always help, not always fix the situation, but it is the best action to take," and "Learn to let things go, but not at the expense of your own sanity."
+663	1.16433525	297	22	I saw the second season of America's got talent. I was disappointed. They did not get it right.
+664	1.51006842	303	15	You'll need to discuss the issue with your landlord and/or bank.
+665	4.14809704	293	11	Not this year, I'm out tomorrow on vacation.
+666	0.65736389	302	12	She might have called you and gone straight to voice mail.
+667	42.23350906	290	13	Thanks for taking the time to call. How can I help?
+668	4.09525466	296	14	I'm fine, thanks for asking, I had a nice vacation.
+669	9.36436033	301	9	Not necessary – why wait for something exciting?
+670	14.11630726	292	4	I make clothes.
+671	1.47364950	292	4	Avoid making assumptions.
+672	12.70676756	298	10	To see how fast you can get through them.
+673	17.15218878	310	6	You will get the job.
+674	41.43330932	299	20	Negotiation is a great way to keep your costs down and get the most out of your purchase.
+675	5.05711985	296	9	who's going to the lecture tomorrow morning?
+676	9.50044632	296	11	Try drinking a glass of water to relieve your pains.
+677	15.34151602	288	8	Let me show you some different styles.
+678	42.16668916	290	4	In the heart.
+679	7.53433156	313	11	We need more people to be onboard and understand insurance.
+680	23.12989974	302	8	Acknowledge the dog's needs.
+681	1.66494083	298	8	Keeping your cool in a tense situation.
+682	40.19161272	295	4	Why not talk?
+683	28.65698099	296	5	I need more time.
+684	23.36737633	291	12	Do not be intimidated when having a conversation with a superior.
+685	0.46312451	299	8	Find inspiration that resonates with you.
+686	40.14663148	290	19	Make sure you have all the ingredients you need. Also, make sure you have enough sauce.
+687	6.56408238	299	10	Why not add "walk" to it then?
+688	14.54987979	289	6	I'm glad you asked!
+689	40.89369059	291	3	It depends.
+690	5.57415652	295	12	What the heck? Stop the wall and let me in?
+691	2.46464276	292	17	Practice these skills in advance and be confident that you have the skills to succeed.
+692	5.07501626	296	6	Are you interested in this?
+693	0.38467979	298	8	Hopefully, in the New Year.<|endoftext|>
+694	43.71592760	304	4	I'll go.
+695	43.14048934	315	12	That is great. I am so excited to hear that.
+696	21.34995198	292	8	Negotiating is important in life.
+697	4.22679639	289	10	Know what you want and are willing to negotiate.
+698	43.19924879	299	20	If you are selling your flat, it is important to do your research and set a realistic price.
+699	42.83429646	296	16	You should check the function that they want and make sure the company offers training.
+700	1.04433298	292	7	I am doing well -- you?
+701	10.41869783	294	12	I understand that your friend is not happy with this song.
+702	41.17618942	293	21	Claire is looking for a long-term relationship; you are looking for a way to get together.
+703	24.83675742	290	9	How can I increase my influence with employers?
+704	41.79457307	296	3	Be prepared.
+705	19.63140345	304	0	
+706	2.01345468	295	14	Do not eat too much because this will cause you to gain weights.
+707	40.87341738	293	15	The most important step is to plan. Start with a timeline and budget.
+708	0.26866055	293	2	Yellow.
+709	40.10187507	292	8	In Seattle, Washington, United States.
+710	12.39256716	294	8	The best way to describe my son?
+711	42.03675818	293	0	
+712	16.57068539	291	8	This question is a little too broad.
+713	14.88427520	293	6	What are we working on?
+714	0.42424369	294	7	You get what you put in.
+715	42.41146374	295	20	I gave her a piece of technology that we both already owned and that is extremely valuable to her.
+716	0.54205847	310	10	I'm so glad to hear you enjoyed it.
+717	27.44913602	292	65	I would say that the first thing you can do is to think about the other person and how she or he may react to your behavior. If you're having a difficult time, perhaps take a moment to step back and analyze the situation. It is easy to lose sight of this approach when you want to get somewhere fast."
+718	0.93769145	348	20	Turtwig is great. And so are those delicious turtle cookies available in the Pokedex.
+719	36.53865337	298	15	I'm having lots of fun! :) Baby is fine, I think.
+720	8.47182155	296	6	Hey Mum, good question.
+721	0.61708665	303	11	Yes, I think they'll be good for you!
+722	39.45796108	292	11	Be prepared and listen to both sides of the issue.
+723	42.65763402	294	12	If it’s a special occasion, you should.
+724	3.44982862	295	12	Communicate your needs and goals and find the right solution.
+725	20.70199752	300	6	I have a free USB.
+726	15.66490865	296	16	If you are interested in making a purchase, make sure you don’t
+727	1.11923647	298	12	I know a lot of people who are really into it.
+728	3.74338055	292	7	I'm fine, and you?
+729	43.58273149	299	10	No thanks. I do not want any more.
+730	3.42166829	290	9	Be friendly, open, and assertive.
+731	43.89623547	297	16	"Human" is not a name you would usually use to describe a person.
+732	8.71878886	296	13	No Lawrence, but we are in the middle of a conversation.
+733	0.26921988	292	3	Just OK.
+734	3.23730063	296	10	I have a few questions about your recent purchase.
+735	0.26937056	299	3	Be prepared.
+736	9.62819839	296	13	First, figure out what you really need and what you want.
+737	0.50066757	291	9	When in doubt, assume you are right.
+738	14.01278591	289	17	Make a list of what you desire to achieve, and how you will achieve it.
+739	0.69267535	301	10	Get plenty of rest and drink plenty of water.
+740	42.45193744	295	5	Do you have kids?
+741	21.88901734	292	18	Networking, understanding peopleâ€™s motivation, and being well-prepared.
+742	43.62684155	293	18	Your new partner is important to you, so you will spend a lot of time together.
+743	33.50582576	299	8	hey mom... how's it going?
+744	3.95615649	293	15	Make sure to have all of the information you need before leaving the house.
+745	1.71278930	306	15	You are not required to entertain people who are only after a quick thrill.
+746	23.23431015	292	6	Being calm and listening carefully.
+747	13.65344715	292	17	Negotiation can be a tough process, but it can also be an exciting one.
+748	44.12575603	300	15	You can reschedule on your own, and make the appropriate adjustments.
+749	0.41976166	292	6	Going to dinner with friends.
+750	0.48582053	296	9	I know what annoys me the most!
+751	43.20838475	296	16	If you are looking for statistical reports, you will have to ask your instructor.
+752	0.28710938	298	3	Just saying...
+753	43.66337538	300	6	sure, but i have classes
+754	0.28655219	291	3	Find shelter.
+755	1.62380767	303	16	I found three new ways to help you and a link to an online video.
+756	22.94550514	300	12	Be well prepared with facts and figures to support your position.
+757	8.34427643	294	9	Don't be the first one to leave.
+758	1.81820822	294	4	I should begin!
+759	0.42411184	295	7	I'm preparing for a party.
+760	0.09809852	296	1	<|endoftext|>
+761	43.64689803	309	15	It depends on who you have to negotiate with and what the deal is.
+762	10.05160904	297	5	Practice makes perfect.
+763	0.87127233	296	10	I don't have time for today's events.
+764	2.79212570	294	7	I'm not really too sure.
+765	2.28294778	317	6	You are being scammed.
+766	0.77111506	295	9	Take your time. Listen to your instinct.
+767	0.30740976	300	4	Know your worth.
+768	32.15857553	291	9	Hey, Laurel. How are you today?
+769	0.36419463	290	4	Make an effort.
+770	43.66560245	299	12	I suggest that both of you try to enjoy this time.
+771	39.58218813	292	40	Think about the advantages and disadvantages of the situation in front of you and understand the emotions being expressed by each person. By listening to each person's needs, you can come to a mutually acceptable conclusion.
+772	10.06977892	294	65	The human brain has three parts: the limbic system, which controls our emotions; the cerebellum, which controls movement; and the cortex, which controls thought, planning, and higher reasoning. These parts don't work together very well, so they are not easily communicated with as they have their own language and logic.
+773	40.63358402	302	15	What’s the weather forecast like for the rest of the weekend?
+774	4.40841961	291	2	Your brain
+775	3.66739416	292	33	In order to keep your brain healthy and functioning at its best it is advised to consume as many vegetables, whole grains, fruits, and legumes as you can.
+776	21.93671608	292	4	Brain and intelligence.
+777	44.65247512	300	7	You can't buy off me.
+778	42.71393442	290	15	What can I do to improve my ability to stay focused and pay attention?
+779	0.57838416	297	13	I was there last year and it was a great experience.<|endoftext|>
+780	3.37166977	292	19	Negotiate from a position of strength by knowing your financial situation and having a game plan.
+781	41.57383680	292	2	Yes.
+782	0.38541055	295	5	Accept and embrace it.
+783	42.77822900	292	12	Look beyond the current situation, look for a better solution.
+784	0.58129525	312	11	I can meet on the 4th or 11th.
+785	41.88801670	291	8	Hi! Tell me something about yourself.
+786	22.54021192	292	14	Building friendships is important. You may also need to change your lifestyle.
+787	12.53428674	342	9	Make sure you have accurate expenses before posting.
+788	2.00827622	290	7	Be on time, plan ahead.
+789	41.87243104	292	10	I can help you to negotiate a better deal.
+790	19.12460637	291	9	Be confident, be prepared, be friendly.
+791	40.95685625	295	15	Work with her and not against her, and you'll make it work.
+792	1.73949718	297	3	Have fun.
+793	40.97235870	295	13	I like him, but we don't have anything in common.
+794	0.42441511	313	7	Go ahead and enjoy the dream.
+795	42.66265893	296	21	If you’re sensitive to gluten and they have celiac disease, your symptoms may be similar.
+796	26.09375978	292	2	No.
+797	0.61669755	300	12	Yes, we did.  Now let's hear yours.
+798	3.82633090	290	5	It will get there.
+799	0.98711634	296	7	What’s your question?
+800	0.57917619	308	7	Research in the online flower marketplace.
+801	3.55285501	291	11	Keep your calendar, deadlines, and deadlines in mind.
+802	6.90731692	296	8	There is usually someone to greet you.
+803	43.02167988	297	56	This site is supported by advertising. If you click on a third-party ad, we may earn an affiliate commission. It won’t change what you see - we just know that we’re passing on savings to make it easier for you to find helpful information.
+804	33.37228036	293	20	Practice patience. You’ll feel better when you have things you love and look good.
+805	5.58239532	298	16	We need to leave by six. It will be quicker to take a taxi.
+806	40.62711620	291	9	A friend wants to know where you are.
+807	12.72218561	297	8	That's right Human, good morning.
+808	5.91650057	293	13	Don't be afraid to negotiate with those who are more attractive.
+809	5.87051773	299	7	There is no easy way out.
+810	46.46067429	303	13	Negotiating and planning for the best outcome for your customer.
+811	0.95661521	300	19	The first thing to do is to know what the legal position is and negotiate at this point.
+812	3.50496173	296	17	You're not the only one in the world who's going through a tough time.
+813	3.68703055	321	14	Don't let someone cut in front of you or cut in line.
+814	3.83335304	298	7	Yes. It was on TV.
+815	1.39242053	300	31	I suggest that you plan a balanced diet with lots of fruit and vegetables, as well as whole grains. I also recommend that you drink plenty of water.
+816	41.65300798	292	12	Knowing your purpose, knowing your value, and having confidence.
+817	5.01288104	306	17	I did not see any protests, but people were divided on this issue on Twitter.
+818	3.90885115	292	16	Negotiating is a skill that can be practiced with any type of contact.
