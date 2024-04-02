@@ -23,8 +23,10 @@ def draw(index, aux_index=None, op='avg', title='', highlight=False):
     """
     Params
     """
-    
+
     e_order = [1, 2, 4, 8, 16]  # hardcoded
+
+    # TODO: highlight_scale_factor
     main_scaled_factor = 0.1 * 1  # (index) +/- scaling target  # +/- 10%
     aux_th = 81.9 * 1  # (aux_index) timeout th  # 10%
 

@@ -8,9 +8,10 @@ mkdir save_heatmap/objects
 
 # SIMULATION
 RES_PATH="./simul_heatmap"
-REPEAT=1  # TODO
+REPEAT=1
 # CHAIN=("ETHEREUM" "POLYGON")
 CHAIN=("ETHEREUM")
+QTO=0  # 0 for infinity
 
 for C in ${CHAIN[@]}; do
     SIZE=$([ ${C} == "ETHEREUM" ] && echo 155 || echo 72)
@@ -24,9 +25,8 @@ for C in ${CHAIN[@]}; do
 
             EPOCH=(1 2 4 8 16)
             for E in ${EPOCH[@]}; do
-            # TODO: qto
-                echo python simulate/nodes.py --verbose 0 --repeat ${REPEAT} --epoch ${E} --qc ${QC} --d ${D} --size ${SIZE} --interval ${INTERVAL} --path "./save_heatmap" --qto 20
-                     python simulate/nodes.py --verbose 0 --repeat ${REPEAT} --epoch ${E} --qc ${QC} --d ${D} --size ${SIZE} --interval ${INTERVAL} --path "./save_heatmap" --qto 20 > ${RES_PATH}/${C}_E${E}_QC${QC}_D${D}.txt
+                echo python simulate/nodes.py --verbose 0 --repeat ${REPEAT} --epoch ${E} --qc ${QC} --d ${D} --size ${SIZE} --interval ${INTERVAL} --path "./save_heatmap" --qto ${QTO}
+                     python simulate/nodes.py --verbose 0 --repeat ${REPEAT} --epoch ${E} --qc ${QC} --d ${D} --size ${SIZE} --interval ${INTERVAL} --path "./save_heatmap" --qto ${QTO} > ${RES_PATH}/${C}_E${E}_QC${QC}_D${D}_QTO${QTO}.txt
             done
         done
     done

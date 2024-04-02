@@ -12,7 +12,7 @@ mkdir save/objects
 
 # SIMULATION
 RES_PATH="./simul/"
-REPEAT=1  # TODO
+REPEAT=100
 # CHAIN=("ETHEREUM" "POLYGON")
 CHAIN=("ETHEREUM")
 
