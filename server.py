@@ -1,3 +1,21 @@
+import argparse
+
+
+def argparser():
+    parser = argparse.ArgumentParser(description='Hyperparameters')
+
+    parser.add_argument('--dataset', metavar='D', type=str, default="samsum",
+                        help='Dataset to use')
+
+    parser.add_argument('--port', metavar='P', type=int, default=30327,
+                        help='Port number')
+
+    # TODO: select bot (chatbot, sqlbot, etc.)
+
+    args = parser.parse_args()
+    return args
+
+
 import os  # nopep8
 import sys  # nopep8
 sys.path.append(os.path.dirname(os.path.abspath(__file__))+'/bot')  # nopep8
@@ -26,10 +44,11 @@ chatbot = Chatbot(tokenizer, model)
 
 """init"""
 
-from datasets import load_dataset
+from datasets import load_dataset  # nopep8
 
 
 """server"""
+
 
 @app.route('/chat', methods=['POST'])
 def chat():
@@ -38,6 +57,7 @@ def chat():
     return jsonify(dict({
         'result': result
     }))
+
 
 @app.route('/train', methods=['POST'])
 def train():
@@ -52,6 +72,7 @@ def train():
         'previous': prev_version,
         'current': curr_version
     }))
+
 
 @app.route('/aggregate', methods=['POST'])
 def aggregate():
@@ -68,8 +89,6 @@ def aggregate():
 
 if __name__ == "__main__":
     # argparse
-    from args import argparser
-
     args = argparser()
     print(args)
 
