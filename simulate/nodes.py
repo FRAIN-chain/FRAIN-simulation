@@ -4,6 +4,8 @@ import pandas as pd
 import numpy as np
 import random
 import math
+import pickle
+import time
 
 
 PATH = "./results"
@@ -21,6 +23,8 @@ def argparser():
                         help='Stop this round when for loop reaching P')
     parser.add_argument('--verbose', metavar='V', type=int, default=1,
                         help='0: silent, 1: speak, 2: speak all')
+    parser.add_argument('--path', default='./save',
+                        help='path for saving pkl files')
 
     """Blockchain Hyperparams"""
 
@@ -37,6 +41,7 @@ def argparser():
                         help='Inference Request / Normal Tx')
     # (0.05 / 155) = 0.0003225806452 : Sereum - Protecting Existing Smart Contracts Against Re-Entrancy Attacks
     # (0.001) : Ethanos - efficient bootstrapping for full nodes on account-based blockchain
+    # (0.001) : Speculative Denial-of-Service Attacks in Ethereum
     parser.add_argument('--latency', metavar='L', type=float, default=0.001,
                         help='Latency of normal EVM execution (s)')
 
@@ -46,16 +51,16 @@ def argparser():
                         help='Number of nodes')  # Also, Block Producer (BP)
     parser.add_argument('--byz', metavar='B', type=int, default=0,
                         help='The number of Byzantine nodes')
-    parser.add_argument('--epoch', metavar='E', type=int, default=8,
+    parser.add_argument('--epoch', metavar='E', type=int, default=1,
                         help='Epoch [blocks]')
     parser.add_argument('--d', metavar='D', type=int, default=128,
-                        help='difficulty (0, 2^256-1], but scaling into (0, 256]')
+                        help='difficulty (0, 2^256-1], but scaled in (0, 256]')
     parser.add_argument('--qc', metavar='QC', type=int, default=11,
                         help='Quorum of Commitments')
     # parser.add_argument('--qr', metavar='QR', type=int, default=11,
     # help='Quorum of Revelations')
     parser.add_argument('--qto', metavar='O', type=int, default=20,
-                        help='Inference Request\'s Timeout [blocks]')
+                        help='Inference Request\'s Timeout [blocks] \ 0 for infinity')
     # parser.add_argument('--tr', metavar='TR', type=int, default=30,
     # help='Period of the Reveal Phase [blocks]')
     # parser.add_argument('--te', metavar='TE', type=int, default=1000,
@@ -128,11 +133,13 @@ if __name__ == "__main__":
         committee = np.zeros((n_qtx, args.nodes))
 
         # Metrics
-        inferences = [dict({'start': -1, 'end': -1}) for _ in range(n_qtx)]  # latency = inferences[id][end] - inferences[id][start] in [Block]  # for evaluation
+        # latency = inferences[id][end] - inferences[id][start] in [Block]  # for evaluation
+        inferences = [dict({'start': -1, 'end': -1}) for _ in range(n_qtx)]
 
         # create tx set
         txn = int(n_qtx / args.freq)
-        txs = [-1 for _ in range(txn)] + [t for t in range(n_qtx)]  # -1 for normal txs, 0~N for inference queries
+        # -1 for normal txs, 0~N for inference queries
+        txs = [-1 for _ in range(txn)] + [t for t in range(n_qtx)]
         random.shuffle(txs)
         txs += [-1 for _ in range(args.stop - len(txs))]
 
@@ -146,6 +153,8 @@ if __name__ == "__main__":
         additional_tx = 0
         max_queue_len = 0
 
+        cached_y = [False for _ in range(nodes)]
+
         for txid, tx in enumerate(txs):  # each tx w/ txid
             if txid % args.size == 0:
                 current_block += 1
@@ -155,8 +164,12 @@ if __name__ == "__main__":
 
             # Tx
             if tx == -1:  # normal tx
-                pass
+                # change Epoch: clear cache
+                if current_block % args.epoch == 0:
+                    cached_y = [False for _ in range(nodes)]
             else:  # inference request tx
+                # change Epoch: clear cache
+                cached_y = [False for _ in range(nodes)]
 
                 # Fail case
                 if (args.nodes - args.byz) < args.qc:
@@ -184,7 +197,7 @@ if __name__ == "__main__":
                 # Actions: not empty, highest priority.
                 if (not qs.empty()) and (qs.queue[0][0] == 0):
                     # Timeout
-                    if current_block - qs.queue[0][1][0] >= args.qto:
+                    if (current_block - qs.queue[0][1][0] >= args.qto) if args.qto > 0 else False:
                         qs.get()
                         timeout_count += 1
                         # break
@@ -196,11 +209,15 @@ if __name__ == "__main__":
                         # vrf
                         # vrf_seed = int(f"{q[2]}{seed}{int(current_block / args.epoch)}{n}")
                         # random.seed(vrf_seed)
-                        y = random.randint(0, 256)
+                        if not cached_y[n]:
+                            cached_y[n] = random.randint(0, 256)
+
                         # byzantine
                         # probabilistic approach
                         bp = random.randint(0, args.nodes)
-                        if (bp >= args.byz) and (y < args.d) and (committee[q[2]][n] == 0):  # join committee
+
+                        # join committee
+                        if (bp >= args.byz) and (cached_y[n] <= args.d) and (committee[q[2]][n] == 0):
                             # inference
                             # print(f"- node {n} do inference")
 
@@ -283,3 +300,16 @@ if __name__ == "__main__":
     if args.verbose > 0:
         print("=" * 105)
         print()
+
+    file_name = f'{args.path}/objects/R{args.repeat}_F{args.freq}_N{args.nodes}_B{args.byz}_E{args.epoch}_D{args.d}_QC{args.qc}_{time.time()}.pkl'
+    with open(file_name, 'wb') as f:
+        pickle.dump([
+            # Data
+            n_txs, n_qtx, additional_txs, timeouts,
+            BRAIN_elapsed_times, others_elapsed_times,
+            # TPS
+            np.ones(args.repeat) * (1 / args.latency),
+            n_txs / others_elapsed_times,
+            n_txs / BRAIN_elapsed_times,
+            # Latency
+            max_queue_lens, latencies_block], f)
