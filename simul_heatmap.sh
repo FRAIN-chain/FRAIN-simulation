@@ -8,7 +8,7 @@ mkdir save_heatmap/objects
 
 # SIMULATION
 RES_PATH="./simul_heatmap"
-REPEAT=1
+REPEAT=100
 # CHAIN=("ETHEREUM" "POLYGON")
 CHAIN=("ETHEREUM")
 QTO=0  # 0 for infinity
