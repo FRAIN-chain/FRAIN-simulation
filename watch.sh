@@ -1,1 +1,1 @@
-watch -d -n 2 nvidia-smi
+watch -d -n 1 nvidia-smi
