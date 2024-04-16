@@ -11,7 +11,7 @@ RES_PATH="./simul_heatmap"
 REPEAT=100
 # CHAIN=("ETHEREUM" "POLYGON")
 CHAIN=("ETHEREUM")
-QTO=0  # 0 for infinity
+QTO=20  # 0 for infinity
 
 for C in ${CHAIN[@]}; do
     SIZE=$([ ${C} == "ETHEREUM" ] && echo 155 || echo 72)
