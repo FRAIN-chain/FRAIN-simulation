@@ -245,7 +245,7 @@ def draw(index, aux_index=None, op='avg', title='', highlight=False):
                                 # left, bottom, width, height
                                 cax=fig.add_axes([0.954, 0.114, 0.012, 0.767]),
                                 orientation='vertical')
-        aux_cbar.set_label('Timeout', labelpad=-51.5)
+        aux_cbar.set_label('# of Timed out', labelpad=-51.5)
 
     # plt.tight_layout()
     # plt.show()
