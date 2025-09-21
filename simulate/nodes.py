@@ -8,9 +8,6 @@ import pickle
 import time
 
 
-PATH = "./results"
-
-
 def argparser():
     """ Parse command line arguments for the simulation. """
     parser = argparse.ArgumentParser(description='Hyperparameters')
@@ -23,29 +20,29 @@ def argparser():
                         help='Stop this round when for loop reaching P')
     parser.add_argument('--verbose', metavar='V', type=int, default=1,
                         help='0: silent, 1: speak, 2: speak all')
-    parser.add_argument('--path', default='./save',
-                        help='path for saving pkl files')
+    parser.add_argument('--training', metavar='TL', type=float, default=0.8912,
+                        help='Training Latency (s)')
 
     """Blockchain Hyperparams"""
 
-    # January 13, 2023 (https://etherscan.io/chart/blocktime) (https://polygonscan.com/chart/blocktime)
+    # Jul, 2025 (https://etherscan.io/chart/blocktime)
     parser.add_argument('--interval', metavar='I', type=float, default=12.06,
                         help='Average Block Time')
-    # January 13, 2023 (https://etherscan.io/chart/tx) (https://polygonscan.com/chart/tx)
-    # 154.630975 -> 155, 71.65305 -> 72
-    parser.add_argument('--size', metavar='S', type=int, default=155,
+    # Jul, 2025 (https://etherscan.io/chart/tx)
+    # 210.1396014785 -> 210
+    parser.add_argument('--size', metavar='S', type=int, default=210,
                         help='Average # of Transaction per block')
-    # Opensea, 2022 Q2 (https://dune.com/queries/690140/1280371) (https://etherscan.io/chart/tx)
+    # Opensea, 2022 Q2 (https://dune.com/queries/690140/1280371)
     # 5752729 / 99638953 = 0.05773574317 -> 0.0577
     parser.add_argument('--freq', metavar='F', type=float, default=0.0577,
-                        help='Inference Request / Normal Tx')
+                        help='Training Request / Normal Tx')
     # (0.05 / 155) = 0.0003225806452 : Sereum - Protecting Existing Smart Contracts Against Re-Entrancy Attacks
     # (0.001) : Ethanos - efficient bootstrapping for full nodes on account-based blockchain
     # (0.001) : Speculative Denial-of-Service Attacks in Ethereum
     parser.add_argument('--latency', metavar='L', type=float, default=0.001,
                         help='Latency of normal EVM execution (s)')
 
-    """BRAIN Hyperparams"""
+    """FRAIN Hyperparams"""
 
     parser.add_argument('--nodes', metavar='N', type=int, default=21,
                         help='Number of nodes')  # Also, Block Producer (BP)
@@ -59,8 +56,8 @@ def argparser():
                         help='Quorum of Commitments')
     # parser.add_argument('--qr', metavar='QR', type=int, default=11,
     # help='Quorum of Revelations')
-    parser.add_argument('--qto', metavar='O', type=int, default=20,
-                        help='Inference Request\'s Timeout [blocks] \ 0 for infinity')
+    parser.add_argument('--qto', metavar='O', type=int, default=0,  # no timeout
+                        help='Training Request\'s Timeout [blocks] \ 0 for infinity')
     # parser.add_argument('--tr', metavar='TR', type=int, default=30,
     # help='Period of the Reveal Phase [blocks]')
     # parser.add_argument('--te', metavar='TE', type=int, default=1000,
@@ -77,39 +74,30 @@ if __name__ == "__main__":
         print("=" * 105)
         print()
 
-    filepath = PATH + '/' + 'med_times.csv'
-
     n_qtx = None
     times = None
 
-    with open(filepath, 'r') as f:
-        df = pd.read_csv(f, delimiter='\t|\n', header=0, engine='python')
-        n_qtx = len(df)
-        # for index, row in df.iterrows():
-        # print(row['time'])
-        times = np.array(df.loc[:, 'time'])
+    avg_time = args.training
+
+    n_qtx = 1000
+    times = np.array([avg_time] * n_qtx)
 
     if args.verbose > 0:
-        print(f"# Inference Requests: {n_qtx}")
-        # print(f"Normal TX latency: {args.latency:8.4f}, Avg Inference latency: {np.average(times[np.nonzero(times)]):8.4f}, (SD: {times.std():8.4f})")
-        print(f"All Inference time: {sum(times):10.4f}")
-        print(f"Avg Inference time: {np.average(times[np.nonzero(times)]):10.4f}, (SD: {times.std():10.4f})")
+        print(f"# Training Requests: {n_qtx}")
+        # print(f"Normal TX latency: {args.latency:8.4f}, Avg Training latency: {np.average(times[np.nonzero(times)]):8.4f}, (SD: {times.std():8.4f})")
+        print(f"All Training time: {sum(times):10.4f}")
+        print(
+            f"Avg Training time: {np.average(times[np.nonzero(times)]):10.4f}, (SD: {times.std():10.4f})")
         print("=" * 105)
         print()
 
     """Simulator"""
 
-    from queue import PriorityQueue  # (priority, (block_height_when_req, time, qtxid))
+    # (0, (block_height_when_req, time, qtxid))
+    from queue import Queue
     # top() -> qs.queue[0]
     # pop() -> get()
     # push() -> put()
-
-    def pareto(size, alpha=1.16, lower=0., upper=1.):
-        s = np.random.pareto(alpha, size)
-        s /= sum(s)
-        s *= (upper - lower)
-        s += lower
-        return s.clip(lower, upper)
 
     repeat = args.repeat
     nodes = args.nodes
@@ -125,20 +113,20 @@ if __name__ == "__main__":
     for r in range(repeat):  # in this repeat,
         random.seed(args.seed + r)  # fix seed for each round
 
-        # BRAIN
-        qs = PriorityQueue()  # lower is first. (because of pareto dist.)
-        ps = pareto(n_qtx, lower=2, upper=1000)  # 0 for highest priority, 1 for secondary
+        # FRAIN
+
+        qs = Queue()  # FIFO queue
         commitments = np.zeros(n_qtx)
         # revelations = np.array([0 for _ in range(n_qtx)])  # assumption: all nodes reveal commitment in an one block.
         committee = np.zeros((n_qtx, args.nodes))
 
         # Metrics
-        # latency = inferences[id][end] - inferences[id][start] in [Block]  # for evaluation
-        inferences = [dict({'start': -1, 'end': -1}) for _ in range(n_qtx)]
+        # latency = trainings[id][end] - trainings[id][start] in [Block]  # for evaluation
+        trainings = [dict({'start': -1, 'end': -1}) for _ in range(n_qtx)]
 
         # create tx set
         txn = int(n_qtx / args.freq)
-        # -1 for normal txs, 0~N for inference queries
+        # -1 for normal txs, 0~N for training queries
         txs = [-1 for _ in range(txn)] + [t for t in range(n_qtx)]
         random.shuffle(txs)
         txs += [-1 for _ in range(args.stop - len(txs))]
@@ -149,25 +137,25 @@ if __name__ == "__main__":
         # data
         current_block = 0
         timeout_count = 0
-        inference_count = 0
+        training_count = 0
         additional_tx = 0
         max_queue_len = 0
 
         cached_y = [False for _ in range(nodes)]
 
         for txid, tx in enumerate(txs):  # each tx w/ txid
-            if txid % args.size == 0:
+            if (txid != 0) and (txid % args.size == 0):
                 current_block += 1
 
             if args.verbose > 1:
-                print(f"Round {r:4d}, Block {current_block:4d}, Inference: # {inference_count:4d}, Timeout: # {timeout_count:4d}, txid {txid:6d} / {len(txs):6d}, tx {'normal' if tx == -1 else 'inferq'} {tx:4d}", end='\r')
+                print(f"Round {r:4d}, Block {current_block:4d}, Training: # {training_count:4d}, Timeout: # {timeout_count:4d}, txid {txid:6d} / {len(txs):6d}, tx {'normal' if tx == -1 else 'inferq'} {tx:4d}", end='\r')
 
             # Tx
             if tx == -1:  # normal tx
                 # change Epoch: clear cache
                 if current_block % args.epoch == 0:
                     cached_y = [False for _ in range(nodes)]
-            else:  # inference request tx
+            else:  # training request tx
                 # change Epoch: clear cache
                 cached_y = [False for _ in range(nodes)]
 
@@ -176,8 +164,9 @@ if __name__ == "__main__":
                     timeout_count += 1
                     continue
 
-                qs.put((ps[tx], (current_block, times[tx], tx)))  # inference request, push()
-                inferences[tx]['start'] = current_block
+                # training request, push()
+                qs.put((0, (current_block, times[tx], tx)))
+                trainings[tx]['start'] = current_block
                 # counting on tx - no additional tx
 
                 if qs.qsize() > max_queue_len:
@@ -187,15 +176,8 @@ if __name__ == "__main__":
             for n in range(nodes):
                 if qs.empty():
                     pass  # nothing in the queue
-                elif qs.queue[0][0] != 0:  # nothing to refer now
-                    top = qs.queue[0]  # top
-                    requested_block = top[1][0]
-                    if requested_block < current_block:
-                        q = qs.get()[1]  # update
-                        qs.put((0, (requested_block, q[1], q[2])))  # update w/ highest priority. Now can refer it.
-
-                # Actions: not empty, highest priority.
-                if (not qs.empty()) and (qs.queue[0][0] == 0):
+                else:
+                    # Actions: not empty, highest priority.
                     # Timeout
                     if (current_block - qs.queue[0][1][0] >= args.qto) if args.qto > 0 else False:
                         qs.get()
@@ -209,8 +191,8 @@ if __name__ == "__main__":
                         # vrf
                         # vrf_seed = int(f"{q[2]}{seed}{int(current_block / args.epoch)}{n}")
                         # random.seed(vrf_seed)
-                        if not cached_y[n]:
-                            cached_y[n] = random.randint(0, 256)
+                        if cached_y[n] is False:
+                            cached_y[n] = random.randint(1, 256)
 
                         # byzantine
                         # probabilistic approach
@@ -218,8 +200,8 @@ if __name__ == "__main__":
 
                         # join committee
                         if (bp >= args.byz) and (cached_y[n] <= args.d) and (committee[q[2]][n] == 0):
-                            # inference
-                            # print(f"- node {n} do inference")
+                            # training
+                            # print(f"- node {n} do training")
 
                             # commit
                             commitments[q[2]] += 1
@@ -233,14 +215,16 @@ if __name__ == "__main__":
 
                                 # pop
                                 qs.get()
-                                inferences[q[2]]['end'] = current_block + int(times[q[2]] / args.interval) + 1  # for inference time
-                                inference_count += 1
+                                # for training time
+                                trainings[q[2]]['end'] = current_block + \
+                                    int(times[q[2]] / args.interval) + 1
+                                training_count += 1
                                 current_block += 1
 
                         elif (bp < args.byz) and (n == args.nodes - 1):  # byzantine case
                             current_block += 1
 
-            if (inference_count + timeout_count) == n_qtx:
+            if (training_count + timeout_count) == n_qtx:
                 break
 
         """End of Round"""
@@ -248,16 +232,18 @@ if __name__ == "__main__":
             print(f"Round {r:4d} End", end='\r')
 
         # print("=" * 105)
-        for i, inference in enumerate(inferences):
-            if inference['end'] == -1:
+        for i, training in enumerate(trainings):
+            if training['end'] == -1:
                 # TODO: fallbacks (for not ended qtxs)
                 if args.verbose > 1:
-                    print(f"Fallbacks @ {r:4d}, {i:4d}, {inference}")
+                    print(f"Fallbacks @ {r:4d}, {i:4d}, {training}")
             else:
-                latencies_block = np.append(latencies_block, [inference['end'] - inference['start']])  # latencies_block
+                latencies_block = np.append(
+                    latencies_block, [training['end'] - training['start']])  # latencies_block
 
         if args.verbose > 1:
-            print(f"Round {r:4d}, Block {current_block:4d}, Inference: # {inference_count:4d}, Timeout: # {timeout_count:4d}" + " " * 19)
+            print(
+                f"Round {r:4d}, Block {current_block:4d}, Training: # {training_count:4d}, Timeout: # {timeout_count:4d}" + " " * 19)
             print("=" * 105)
             print()
         # print("Queue", qs.queue)
@@ -280,36 +266,25 @@ if __name__ == "__main__":
 
     blocks = np.array(blocks)
     n_txs = np.array(n_txs)  # number of tasks
-    timeouts = np.array(timeouts)  # failed inference tasks
+    timeouts = np.array(timeouts)  # failed training tasks
     max_queue_lens = np.array(max_queue_lens)
     additional_txs = np.array(additional_txs)
 
-    BRAIN_elapsed_times = (n_txs + additional_txs) * args.latency
+    FRAIN_elapsed_times = (n_txs + additional_txs) * args.latency
     others_elapsed_times = (n_txs - n_qtx) * args.latency + sum(times)
 
-    print(f"Executed Time (s)       :", evaluate(BRAIN_elapsed_times))
-    print(f"Executed Inference Tasks:", evaluate(n_qtx - timeouts))
-    print(f"Timeout  Inference Tasks:", evaluate(timeouts))
+    print(f"Executed Time (s)       :", evaluate(FRAIN_elapsed_times))
+    print(f"Executed Training Tasks :", evaluate(n_qtx - timeouts))
+    print(f"Timeout  Training Tasks :", evaluate(timeouts))
     print()
-    print(f"TPS (tx/s) No Inference :", evaluate(np.ones(args.repeat) * (1 / args.latency)))  # tasks / (tasks * per_latency)
+    print(f"TPS (tx/s) No Training  :", evaluate(np.ones(args.repeat)
+          * (1 / args.latency)))  # tasks / (tasks * per_latency)
     print(f"TPS (tx/s) Other        :", evaluate(n_txs / others_elapsed_times))
-    print(f"TPS (tx/s) BRAIN        :", evaluate(n_txs / BRAIN_elapsed_times))  # [Task Per Second]
+    print(f"TPS (tx/s) FRAIN        :", evaluate(n_txs /
+          FRAIN_elapsed_times))  # [Task Per Second]
     print()
     print(f"Max Queue Length        :", evaluate(max_queue_lens))
     print(f"Latency [blocks]        :", evaluate(latencies_block))
     if args.verbose > 0:
         print("=" * 105)
         print()
-
-    file_name = f'{args.path}/objects/R{args.repeat}_F{args.freq}_N{args.nodes}_B{args.byz}_E{args.epoch}_D{args.d}_QC{args.qc}_{time.time()}.pkl'
-    with open(file_name, 'wb') as f:
-        pickle.dump([
-            # Data
-            n_txs, n_qtx, additional_txs, timeouts,
-            BRAIN_elapsed_times, others_elapsed_times,
-            # TPS
-            np.ones(args.repeat) * (1 / args.latency),
-            n_txs / others_elapsed_times,
-            n_txs / BRAIN_elapsed_times,
-            # Latency
-            max_queue_lens, latencies_block], f)
